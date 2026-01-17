@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_planet_holder",
+  "%Name":"obj_planet_bench",
   "eventList":[],
   "managed":true,
-  "name":"obj_planet_holder",
+  "name":"obj_planet_bench",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
