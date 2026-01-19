@@ -1,7 +1,7 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_orbit",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":155,
   "bbox_left":0,
   "bbox_right":155,

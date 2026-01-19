@@ -1,18 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_red_planet",
-  "eventList":[],
+  "%Name":"obj_sun",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_red_planet",
+  "name":"obj_sun",
   "overriddenProperties":[],
   "parent":{
-    "name":"Planets",
-    "path":"folders/Objects/Planets.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_planet",
-    "path":"objects/obj_planet/obj_planet.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_red_planet",
-    "path":"sprites/spr_red_planet/spr_red_planet.yy",
+    "name":"spr_sun",
+    "path":"sprites/spr_sun/spr_sun.yy",
   },
   "spriteMaskId":null,
   "visible":true,

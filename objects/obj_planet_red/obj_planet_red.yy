@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_green_planet",
+  "%Name":"obj_planet_red",
   "eventList":[],
   "managed":true,
-  "name":"obj_green_planet",
+  "name":"obj_planet_red",
   "overriddenProperties":[],
   "parent":{
     "name":"Planets",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_green_planet",
-    "path":"sprites/spr_green_planet/spr_green_planet.yy",
+    "name":"spr_red_planet",
+    "path":"sprites/spr_red_planet/spr_red_planet.yy",
   },
   "spriteMaskId":null,
   "visible":true,

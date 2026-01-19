@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_blue_planet",
-  "eventList":[],
+  "%Name":"obj_level_controller",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_blue_planet",
+  "name":"obj_level_controller",
   "overriddenProperties":[],
   "parent":{
-    "name":"Planets",
-    "path":"folders/Objects/Planets.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_planet",
-    "path":"objects/obj_planet/obj_planet.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_blue_planet",
-    "path":"sprites/spr_blue_planet/spr_blue_planet.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

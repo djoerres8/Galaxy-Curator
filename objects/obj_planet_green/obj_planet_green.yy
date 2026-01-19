@@ -1,17 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_game",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_planet_green",
+  "eventList":[],
   "managed":true,
-  "name":"obj_game",
+  "name":"obj_planet_green",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Planets",
+    "path":"folders/Objects/Planets.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_planet",
+    "path":"objects/obj_planet/obj_planet.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -29,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_green_planet",
+    "path":"sprites/spr_green_planet/spr_green_planet.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
