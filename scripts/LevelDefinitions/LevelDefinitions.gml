@@ -15,11 +15,11 @@ global.LEVELS[0] = {
 
 // LEVEL 1
 global.LEVELS[1] = {
-    orbits: 3,
+    orbits: 2,
     planets: [
-        { type: obj_planet_red, count: 1 },
+        { type: obj_planet_red, count: 2 },
         { type: obj_planet_green, count: 1 },
-        { type: obj_planet_blue, count: 2 }
+        { type: obj_planet_blue, count: 4 }
     ]
 };
 

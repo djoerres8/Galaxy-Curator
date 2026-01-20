@@ -5,20 +5,21 @@ current_level = 1;
 
 // Bench positions for planets not in orbit
 bench_positions = [
-    {x:128, y:128, occupied:0}, {x:288, y:128, occupied:0},
-    {x:128, y:256, occupied:0}, {x:288, y:256, occupied:0},
-    {x:128, y:384, occupied:0}, {x:288, y:384, occupied:0},
-    {x:128, y:512, occupied:0}, {x:288, y:512, occupied:0},
-    {x:128, y:640, occupied:0}, {x:288, y:640, occupied:0}
+    {x:128, y:128}, {x:288, y:128},
+    {x:128, y:256}, {x:288, y:256},
+    {x:128, y:384}, {x:288, y:384},
+    {x:128, y:512}, {x:288, y:512},
+    {x:128, y:640}, {x:288, y:640}
 ];
 
 // based on the total number of orbits in the level, adjust the radius of each orbit.
 // when there is 1 orbit, its radius should be 300.
 // when there are 2 orbits, the first radius will be 200 the second, 400 etc...
+// always have the largest value at the end of each array. we use this in the snapping calculation
 orbit_radii = [
 	[],
 	[300], 
-	[200, 400], 
+	[150, 300], 
 	[200, 400, 600]
 ];
 
@@ -33,8 +34,10 @@ for (var i = 0; i < array_length(level_data.planets); i += 1)
 {
 	var planet = level_data.planets[i];
 	
-	for (var j = 0; j < planet.count; j += 1){
-		instance_create_layer(bench_positions[num_planets].x, bench_positions[num_planets].y, "Instances", planet.type);
+	for (var j = 0; j < planet.count; j += 1)
+	{
+		var new_planet = instance_create_layer(bench_positions[num_planets].x, bench_positions[num_planets].y, "Instances", planet.type);
+		new_planet.bench_position = num_planets; // set planets position on bench
 		num_planets++;
 	}
 }
