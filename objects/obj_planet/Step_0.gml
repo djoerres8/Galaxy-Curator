@@ -1,14 +1,21 @@
 
 // BEING HELD BY MOUSE
 //planets should all be allowed to be grabbed
-//check if cursor is over the planet and if lmb is pressed set x/y and is_held to true. Dragging is handled at end of step
-if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id))
+//check if cursor is over the planet and if lmb is pressed set x/y and is_held to true. 
+//Dragging is handled at end of step
+//global.HOLDING_SOMTHING makes sure only 1 thing can be held at a time
+if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id) && !global.HOLDING_SOMTHING)
 {
+	//remove from orbit
+	if (in_orbit){
+		array_delete(obj_level_controller.orbits[orbit_index].planets, array_get_index(obj_level_controller.orbits[orbit_index].planets, id), 1);
+	}
 	x = mouse_x;
 	y = mouse_y;
 	is_held = 1;
 	on_bench = 0;
 	in_orbit = 0;
+	global.HOLDING_SOMTHING = 1;
 	//audio_play_sound(snd_planet_grabbed, 0, false); // sound effect
 }
 
@@ -30,9 +37,13 @@ if (is_traveling)
 		
 		if (destination == "orbit")
 		{
-			//mark planet as in_orbit, set orbit_radius
+			//mark planet as in_orbit, set orbit_radius, validate level
 			in_orbit = 1;
 			orbit_angle = point_direction(obj_sun.x, obj_sun.y, x, y); // re-calculate angle to sun	
+			
+			// add planet to orbit for validation
+			array_push(obj_level_controller.orbits[orbit_index].planets, id);
+			LevelValidation();
 		}
 		else if (destination == "bench")
 		{

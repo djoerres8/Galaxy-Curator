@@ -6,16 +6,13 @@ global.PlanetRules = {
     red: {
         min_orbit: 1,
         max_orbit: 2,
-        must_be_alone: false
     },
     blue: {
         min_orbit: 4,
         max_orbit: 999,
-        must_be_alone: false
     },
     green: {
         min_orbit: 1,
         max_orbit: 999,
-        must_be_alone: true
     }
 };

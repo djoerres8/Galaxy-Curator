@@ -8,28 +8,26 @@ if(is_held && mouse_check_button(mb_left))
 if(is_held && mouse_check_button_released(mb_left))
 {
     is_held = 0;
+	global.HOLDING_SOMTHING = 0;
 	
 	//check for distance from sun	
 	var distance_from_sun = point_distance(mouse_x, mouse_y, obj_sun.x, obj_sun.y);
-	var current_orbits = obj_level_controller.orbit_radii[obj_level_controller.level_data.orbits];
-	var largest_current_orbit = current_orbits[array_length(current_orbits)-1]; 
-	// if when dropped distance from sun is within 100 of the largest orbit, find closest orbit
 	
 	// if the planet is within snapping range (is at least touching the outer orbit)
-	if (distance_from_sun <= largest_current_orbit + radius)
+	if (distance_from_sun <= array_last(obj_level_controller.orbits).radius + radius)
 	{
 		
 		//find which orbit the planet is closest to. (this chunk is a little confusing, easy to draw out though)
-		var closest_orbit = current_orbits[0]; // initialise both to first in array.
-		var closest_distance = abs(distance_from_sun - current_orbits[0]); 
+		var closest_orbit = 0; // initialise both to first in array.
+		var closest_distance = abs(distance_from_sun - obj_level_controller.orbits[0].radius); 
 		
-		for (var i = 0; i < array_length(current_orbits); i += 1)
+		for (var i = 0; i < array_length(obj_level_controller.orbits); i += 1)
 		{
-			var distance_from_orbit = abs(distance_from_sun - current_orbits[i]);
+			var distance_from_orbit = abs(distance_from_sun - obj_level_controller.orbits[i].radius);
 			if (distance_from_orbit < closest_distance)
 			{
 				closest_distance = distance_from_orbit;
-				closest_orbit =  current_orbits[i];
+				closest_orbit =  i;
 			}
 		}
 		
@@ -38,11 +36,12 @@ if(is_held && mouse_check_button_released(mb_left))
 		
 		//set planet on its way to the destination
 		is_traveling = 1;
-		travel_destination = { x: obj_sun.x + lengthdir_x(closest_orbit, ang), y: obj_sun.y + lengthdir_y(closest_orbit, ang) };
+		travel_destination = { x: obj_sun.x + lengthdir_x(obj_level_controller.orbits[closest_orbit].radius, ang), y: obj_sun.y + lengthdir_y(obj_level_controller.orbits[closest_orbit].radius, ang) };
 		destination = "orbit";
 		
 		//set orbit_radius to know which orbit the planet is in.
-		orbit_radius = closest_orbit;
+		orbit_radius = obj_level_controller.orbits[closest_orbit].radius;
+		orbit_index = closest_orbit;
 		
 	}
 	// return planet to bench
