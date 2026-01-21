@@ -14,5 +14,11 @@ global.PlanetRules = {
     green: {
         min_orbit: 1,
         max_orbit: 999,
+    },
+	// gray planets have 0 requirements. they can exist in any orbit with any other planets
+    gray: {
+        min_orbit: 0,
+        max_orbit: 999,
     }
+	
 };

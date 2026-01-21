@@ -24,6 +24,7 @@
   ],
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
+    {"link":"io.gamemaker.gmparticlepresets-1.0.0","name":"io.gamemaker.gmparticlepresets-1.0.0","path":"io.gamemaker.gmparticlepresets-1.0.0.yyp",},
   ],
   "IncludedFiles":[],
   "isEcma":false,
@@ -50,6 +51,7 @@
     {"id":{"name":"obj_planet_red","path":"objects/obj_planet_red/obj_planet_red.yy",},},
     {"id":{"name":"obj_planet","path":"objects/obj_planet/obj_planet.yy",},},
     {"id":{"name":"obj_sun","path":"objects/obj_sun/obj_sun.yy",},},
+    {"id":{"name":"ps_test","path":"particles/ps_test/ps_test.yy",},},
     {"id":{"name":"rm_level_1","path":"rooms/rm_level_1/rm_level_1.yy",},},
     {"id":{"name":"rm_level_select","path":"rooms/rm_level_select/rm_level_select.yy",},},
     {"id":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},

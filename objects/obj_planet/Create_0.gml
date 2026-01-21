@@ -24,3 +24,9 @@ orbit_radius = 0; // marks which orbit the planet is on
 
 //Validation
 is_passing = 0;
+
+//Ripple effect
+ripple_timer = 0;
+ripple_duration = 120; //random_range(60, 150);
+ripple_starting_alpha = .33;
+alarm[0] = 60*4 //random_range(4, 7);
