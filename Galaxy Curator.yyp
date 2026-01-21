@@ -22,7 +22,9 @@
     {"$GMFolder":"","%Name":"Sounds","folderPath":"folders/Sounds.yy","name":"Sounds","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "ForcedPrefabProjectReferences":[],
+  "ForcedPrefabProjectReferences":[
+    {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
+  ],
   "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
@@ -31,6 +33,7 @@
   },
   "name":"Galaxy Curator",
   "resources":[
+    {"id":{"name":"font_debug","path":"fonts/font_debug/font_debug.yy",},},
     {"id":{"name":"font_menu","path":"fonts/font_menu/font_menu.yy",},},
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
     {"id":{"name":"obj_hand","path":"objects/obj_hand/obj_hand.yy",},},
@@ -42,7 +45,6 @@
     {"id":{"name":"obj_menu_quit","path":"objects/obj_menu_quit/obj_menu_quit.yy",},},
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
     {"id":{"name":"obj_orbit","path":"objects/obj_orbit/obj_orbit.yy",},},
-    {"id":{"name":"obj_planet_bench","path":"objects/obj_planet_bench/obj_planet_bench.yy",},},
     {"id":{"name":"obj_planet_blue","path":"objects/obj_planet_blue/obj_planet_blue.yy",},},
     {"id":{"name":"obj_planet_green","path":"objects/obj_planet_green/obj_planet_green.yy",},},
     {"id":{"name":"obj_planet_red","path":"objects/obj_planet_red/obj_planet_red.yy",},},
