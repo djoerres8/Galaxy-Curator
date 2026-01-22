@@ -7,9 +7,10 @@ global.LEVELS = [];
 global.LEVELS[0] = {
     orbits: 1,
     planets: [
-        { type: obj_planet_red, count: 1 },
-        { type: obj_planet_green, count: 1 },
-        { type: obj_planet_blue, count: 2 }
+        { temperature: "hot", shape: "circle", size: "medium" , count: 1 },
+		{ temperature: "cold", shape: "spiky", size: "small" , count: 1 },
+		{ temperature: "any", shape: "heart", size: "medium" , count: 2 },
+		{ temperature: "temperate", shape: "circle", size: "large" , count: 1 }
     ]
 };
 
@@ -17,11 +18,11 @@ global.LEVELS[0] = {
 global.LEVELS[1] = {
     orbits: 3,
     planets: [
-        { type: obj_planet_red, count: 2 },
-        { type: obj_planet_green, count: 1 },
-        { type: obj_planet_blue, count: 2 },
-        { type: obj_planet_orange, count: 2 },
-        { type: obj_planet_pink, count: 2 }
+        { temperature: "hot", shape: "circle", size: "medium" , count: 1 },
+		{ temperature: "cold", shape: "spiky", size: "small" , count: 1 },
+		{ temperature: "cold", shape: "spiky", size: "large" , count: 3 },
+		{ temperature: "any", shape: "heart", size: "medium" , count: 2 },
+		{ temperature: "temperate", shape: "circle", size: "large" , count: 1 }
     ]
 };
 

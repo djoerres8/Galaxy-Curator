@@ -29,23 +29,8 @@ orbit_radii = [
 // get current level data
 level_data = global.LEVELS[current_level];
 
-//tracks number of planets on the level to know where to place them on the bench
-num_planets = 0;
-
-//insert planets into the room.
-for (var i = 0; i < array_length(level_data.planets); i += 1)
-{
-	var planet = level_data.planets[i];
-	
-	for (var j = 0; j < planet.count; j += 1)
-	{
-		var new_planet = instance_create_layer(bench_positions[num_planets].x, bench_positions[num_planets].y, "Instances", planet.type);
-		new_planet.bench_position = num_planets; // set planets position on bench
-		num_planets++;
-	}
-}
-
-
+//create planets for level
+createPlanets(level_data.planets)
 
 // VALIDATION VARIABLES
 level_complete = false; // true when all planets are on the system and rules all pass
