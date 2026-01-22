@@ -19,7 +19,9 @@ global.LEVELS[1] = {
     planets: [
         { type: obj_planet_red, count: 2 },
         { type: obj_planet_green, count: 1 },
-        { type: obj_planet_blue, count: 4 }
+        { type: obj_planet_blue, count: 2 },
+        { type: obj_planet_orange, count: 2 },
+        { type: obj_planet_pink, count: 2 }
     ]
 };
 

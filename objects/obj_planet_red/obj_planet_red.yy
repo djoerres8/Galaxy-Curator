@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_red_planet",
-    "path":"sprites/spr_red_planet/spr_red_planet.yy",
+    "name":"spr_planet_red",
+    "path":"sprites/spr_planet_red/spr_planet_red.yy",
   },
   "spriteMaskId":null,
   "visible":true,

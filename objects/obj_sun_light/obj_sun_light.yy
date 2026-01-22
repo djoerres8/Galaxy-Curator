@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_planet_green",
-  "eventList":[],
+  "%Name":"obj_sun_light",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_planet_green",
+  "name":"obj_sun_light",
   "overriddenProperties":[],
   "parent":{
-    "name":"Planets",
-    "path":"folders/Objects/Planets.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_planet",
-    "path":"objects/obj_planet/obj_planet.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_planet_green",
-    "path":"sprites/spr_planet_green/spr_planet_green.yy",
+    "name":"spr_sun_light",
+    "path":"sprites/spr_sun_light/spr_sun_light.yy",
   },
   "spriteMaskId":null,
   "visible":true,

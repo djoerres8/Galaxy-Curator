@@ -4,7 +4,9 @@
   "eventList":[],
   "managed":true,
   "name":"obj_planet_blue",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_planet","path":"objects/obj_planet/obj_planet.yy",},"propertyId":{"name":"temperature","path":"objects/obj_planet/obj_planet.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"cold\"",},
+  ],
   "parent":{
     "name":"Planets",
     "path":"folders/Objects/Planets.yy",
@@ -31,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_blue_planet",
-    "path":"sprites/spr_blue_planet/spr_blue_planet.yy",
+    "name":"spr_planet_blue",
+    "path":"sprites/spr_planet_blue/spr_planet_blue.yy",
   },
   "spriteMaskId":null,
   "visible":true,

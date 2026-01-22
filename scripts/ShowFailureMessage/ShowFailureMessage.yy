@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ShowFailureMessage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ShowFailureMessage",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

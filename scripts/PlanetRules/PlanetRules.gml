@@ -1,24 +1,58 @@
 // rules for all planet types go here
-// better to have them all centralized and global so during validation they can be checked easier.
+// better to have them all centralized and global so during validation they can be checked easier.\
 
-// orbits are counted center -> out. orbit closest to sun is 1.
-global.PlanetRules = {
-    red: {
-        min_orbit: 1,
-        max_orbit: 2,
+//Sizes  1, 2, 3
+
+global.PLANET_RULES = {
+    gray: {
+        temperature: "any",
+		size: 2,
+		must_have_buddy: 0,
+		must_be_alone: 0
+    },
+	red: {
+        temperature: "hot",
+		size: 2,
+		must_have_buddy: 0,
+		must_be_alone: 0
     },
     blue: {
-        min_orbit: 4,
-        max_orbit: 999,
+        temperature: "cold",
+		size: 2,
+		must_have_buddy: 0,
+		must_be_alone: 0
     },
     green: {
-        min_orbit: 1,
-        max_orbit: 999,
+        temperature: "temperate",
+		size: 2,
+		must_have_buddy: 0,
+		must_be_alone: 0
     },
-	// gray planets have 0 requirements. they can exist in any orbit with any other planets
-    gray: {
-        min_orbit: 0,
-        max_orbit: 999,
-    }
+	orange: {
+        temperature: "any",
+		size: 3,
+		must_have_buddy: 0,
+		must_be_alone: 0
+    },
+	pink: {
+        temperature: "any",
+		size: 1,
+		must_have_buddy: 0,
+		must_be_alone: 0
+    },
+	cyan: {
+        temperature: "any",
+		size: 2,
+		must_have_buddy: 1,
+		must_be_alone: 0
+    },
+	purple: {
+        temperature: "any",
+		size: 2,
+		must_have_buddy: 0,
+		must_be_alone: 1
+    },
+    
 	
 };
+
