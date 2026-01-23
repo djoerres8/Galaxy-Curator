@@ -40,11 +40,13 @@ bob_distance = random_range(.18, .22);
 
 //Ripple effect
 ripple_timer = 0;
-ripple_duration = 120; //random_range(60, 150);
-ripple_starting_alpha = .33;
-alarm[0] = 60*4 //random_range(4, 7);
+ripple_duration = 60; //random_range(60, 150);
+ripple_starting_alpha = .5;
+ripple_interval =  60*2.5;
+alarm[0] = ripple_interval; //random_range(4, 7);
 
 //PLANET VISUAL
+planet_color = c_gray;
 function applyVisuals() {
 
     // Shape → sprite
@@ -56,11 +58,12 @@ function applyVisuals() {
 
     // Temperature → color tint
     switch (temperature) {
-        case "hot":        image_blend = c_red;    break;
-        case "cold":       image_blend = c_blue;   break;
-        case "temperate":  image_blend = c_green;  break;
-        case "any":        image_blend = c_gray; break;
+        case "hot":        planet_color = c_red;    break;
+        case "cold":       planet_color = c_blue;   break;
+        case "temperate":  planet_color = c_green;  break;
+        case "any":        planet_color = c_gray;   break;
     }
+	image_blend = planet_color;
 	
 	// Size → scale
     switch (size) {

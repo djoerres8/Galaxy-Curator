@@ -2,14 +2,26 @@
 //RIPPLE EFFECT
 ripple_timer++;
 var t = ripple_timer / ripple_duration; // 0 → 1
-var ripple_radius = lerp(radius, (radius+30), t);
+var ripple_radius = lerp(radius, (radius+30), t); // for circle ripple
+var scale = lerp(1, 1.6, t); // for sprite ripple
 var alpha  = lerp(ripple_starting_alpha, 0, t);
 
 draw_set_alpha(alpha);
 draw_set_color(c_white);
-draw_circle(x, y, ripple_radius, false);
+//draw_circle(x, y, ripple_radius, false); // plain circle ripple
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale * scale, image_yscale * scale, image_angle, c_white, alpha); //sprite ripple
 draw_set_alpha(1); // reset alpha for other draws
 
+
+//GLOW
+var glowNum = 5;
+var glowScale = [1.05, 1.1, 1.15, 1.2, 1.25];
+var glowAlpha = [.5, .4, .3, .2, .1];
+var glow_color = merge_color(planet_color, c_white, 0.5);
+
+for (var i = 0; i < glowNum; i++){
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale * glowScale[i], image_yscale * glowScale[i], image_angle, glow_color, glowAlpha[i]); //sprite ripple
+}
 
 // draw sprite
 draw_self();
