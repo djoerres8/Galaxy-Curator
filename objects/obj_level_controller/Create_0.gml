@@ -32,15 +32,19 @@ level_data = global.LEVELS[current_level];
 //create planets for level
 createPlanets(level_data.planets)
 
+//tracks number of planets on the level to know where to place them on the bench
+num_planets = 0;
+num_orbits = level_data.orbits;
+
 // VALIDATION VARIABLES
 level_complete = false; // true when all planets are on the system and rules all pass
 
 // Holds the information for each Orbit includeing its radius and what planets are on each orbit and temp planets are valid on those orbits
 orbits = [];
-for (var i = 0; i < level_data.orbits; i++) {
+for (var i = 0; i < num_orbits; i++) {
     orbits[i] = { 
 		radius: orbit_radii[level_data.orbits][i],
-		temperature: getOrbitTemperature(level_data.orbits, i),
+		temperature: getOrbitTemperature(num_orbits, i),
 		planets: [] 
 	};
 }

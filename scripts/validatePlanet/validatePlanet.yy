@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"LevelValidation",
+  "%Name":"validatePlanet",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"LevelValidation",
+  "name":"validatePlanet",
   "parent":{
     "name":"Validation",
     "path":"folders/Scripts/Validation.yy",

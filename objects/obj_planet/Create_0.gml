@@ -21,6 +21,7 @@ bench_position = 0; // which seat of the bench is th eplanet on?
 
 // variables to control planet when in orbit
 in_orbit = 0; // planet is in orbit
+orbit_index = -1; // which orbit in the level is being orbited. -1 if not in orbit
 orbit_angle = point_direction(obj_sun.x, obj_sun.y, x, y); // the angle from the planet to the sun
 orbit_speed = 0.5; // degrees per step
 orbit_radius = 0; // marks which orbit the planet is on

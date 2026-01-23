@@ -1,0 +1,64 @@
+
+//given a planet figure out if its passing all its own rules
+//planet param is an instance of obj_planet
+function validatePlanet(planet){
+	
+	var temperature_passing = 1;
+	var shape_passing = 1;
+	var size_passing = 1;
+	var error_msg;
+	
+	//TEMPERATURE
+	if (obj_level_controller.orbits[planet.orbit_index].temperature != planet.temperature && planet.temperature != "any"){
+		temperature_passing = 0;
+	}
+	
+	
+	// SHAPE
+	
+	//spikey need to be alone on orbit
+	if (planet.shape == "spiky" && array_length(obj_level_controller.orbits[planet.orbit_index].planets) > 1){
+		shape_passing = 0;
+	}
+	
+	//heart needs at least 1 pal
+	if (planet.shape == "heart" && array_length(obj_level_controller.orbits[planet.orbit_index].planets) == 1){
+		shape_passing = 0;
+	}
+	
+	
+	// SIZE
+	if (planet.size != "circle"){
+		
+		//loop through planets in outer orbit
+		//if not max orbit, check outer orbit
+		if (planet.orbit_index+1 != obj_level_controller.num_orbits){
+			for (var i = 0; i <  array_length(obj_level_controller.orbits[planet.orbit_index+1].planets); i++){
+				if (
+				(obj_level_controller.orbits[planet.orbit_index+1].planets[i].size == "small" && planet.size == "large") ||
+				(obj_level_controller.orbits[planet.orbit_index+1].planets[i].size == "large" && planet.size == "small")){
+					size_passing = 0;
+				}
+			}
+		}
+		
+		//loop through planets in inner orbit
+		//if not min orbit, check inner orbit
+		if (planet.orbit_index != 0){
+			for (var i = 0; i <  array_length(obj_level_controller.orbits[planet.orbit_index-1].planets); i++){	
+				if (
+				(obj_level_controller.orbits[planet.orbit_index-1].planets[i].size == "small" && planet.size == "large") ||
+				(obj_level_controller.orbits[planet.orbit_index-1].planets[i].size == "large" && planet.size == "small")){
+					size_passing = 0;
+				}
+			}
+		}
+	}
+	
+	if (size_passing && temperature_passing && shape_passing){
+		planet.is_passing = 1;	
+	}else{
+		planet.is_passing = 0;	
+	}
+	
+}

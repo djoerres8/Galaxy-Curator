@@ -43,6 +43,7 @@ if (is_traveling)
 			
 			// add planet to orbit for validation
 			array_push(obj_level_controller.orbits[orbit_index].planets, id);
+			validatePlanet(self);
 			LevelValidation();
 		}
 		else if (destination == "bench")
