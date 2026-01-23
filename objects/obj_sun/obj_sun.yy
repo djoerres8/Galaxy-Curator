@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_sun",
-    "path":"sprites/spr_sun/spr_sun.yy",
+    "name":"spr_planet_circle",
+    "path":"sprites/spr_planet_circle/spr_planet_circle.yy",
   },
   "spriteMaskId":null,
   "visible":true,
