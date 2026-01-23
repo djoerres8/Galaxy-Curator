@@ -45,6 +45,11 @@ ripple_starting_alpha = .5;
 ripple_interval =  60*2.5;
 alarm[0] = ripple_interval; //random_range(4, 7);
 
+//Planet Glow
+glow_num = 5;
+glow_scale = [1.05, 1.1, 1.15, 1.2, 1.25];
+glow_alpha = [.5, .4, .3, .2, .1];
+
 //PLANET VISUAL
 planet_color = c_gray;
 function applyVisuals() {
