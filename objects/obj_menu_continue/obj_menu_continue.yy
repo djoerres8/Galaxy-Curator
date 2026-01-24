@@ -9,8 +9,8 @@
   "name":"obj_menu_continue",
   "overriddenProperties":[],
   "parent":{
-    "name":"Menu_Buttons",
-    "path":"folders/Objects/Menu_Buttons.yy",
+    "name":"Main_Menu",
+    "path":"folders/Objects/Menu_Buttons/Main_Menu.yy",
   },
   "parentObjectId":{
     "name":"obj_menu_button",

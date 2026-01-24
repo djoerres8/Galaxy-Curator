@@ -1,16 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_menu_new_game",
+  "%Name":"obj_level_select_button",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_menu_new_game",
+  "name":"obj_level_select_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"Main_Menu",
-    "path":"folders/Objects/Menu_Buttons/Main_Menu.yy",
+    "name":"Level_Select",
+    "path":"folders/Objects/Menu_Buttons/Level_Select.yy",
   },
   "parentObjectId":{
     "name":"obj_menu_button",
@@ -34,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_menu_button",
-    "path":"sprites/spr_menu_button/spr_menu_button.yy",
+    "name":"spr_level_select",
+    "path":"sprites/spr_level_select/spr_level_select.yy",
   },
   "spriteMaskId":null,
   "visible":true,
