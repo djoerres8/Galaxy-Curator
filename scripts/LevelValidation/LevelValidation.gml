@@ -15,8 +15,15 @@ function levelValidation(){
 		}
 	}
 	
-	//Add individual level validation HERE
+	//Validate level rules
+	var level_rules = global.LEVELS[obj_level_controller.current_level].rules;
+	for (var i = 0; i < array_length(level_rules); i++){
+		if (!level_rules[i](false)){
+			valid = 0;	
+		}
+	}
 	
+	// set level completion and show fail msg
 	if (!valid){
 		showFailureMessage("fail...");
 		obj_level_controller.level_complete = 0;
