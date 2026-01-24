@@ -6,7 +6,7 @@ function validatePlanet(planet){
 	var temperature_passing = 1;
 	var shape_passing = 1;
 	var size_passing = 1;
-	var error_msg;
+	var error_msg = "failing...";
 	
 	//TEMPERATURE
 	if (obj_level_controller.orbits[planet.orbit_index].temperature != planet.temperature && planet.temperature != "any"){
@@ -55,10 +55,11 @@ function validatePlanet(planet){
 		}
 	}
 	
-	if (size_passing && temperature_passing && shape_passing){
+	if (size_passing && temperature_passing && shape_passing && !planet.on_bench){
 		planet.is_passing = 1;	
 	}else{
-		planet.is_passing = 0;	
+		planet.is_passing = 0;
+		planet.failure_msg = error_msg;
 	}
 	
 }

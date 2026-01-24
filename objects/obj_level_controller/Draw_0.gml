@@ -3,8 +3,8 @@
 layer = layer_get_id("Orbits"); //set layer so orbits appear below planets
 for (var i = 0; i < level_data.orbits; i += 1)
 {
-	DrawOrbitEllipse(orbits[i], 5, i);
-	//DrawOrbitCircle(orbits[i], 5)
+	//DrawOrbitEllipse(orbits[i], 5, i);
+	DrawOrbitCircle(orbits[i], 5);
 }
 
 

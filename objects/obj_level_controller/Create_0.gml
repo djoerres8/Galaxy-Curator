@@ -37,7 +37,7 @@ num_planets = 0;
 num_orbits = level_data.orbits;
 
 // VALIDATION VARIABLES
-level_complete = false; // true when all planets are on the system and rules all pass
+level_complete = 0; // true when all planets are on the system and rules all pass
 
 // Holds the information for each Orbit includeing its radius and what planets are on each orbit and temp planets are valid on those orbits
 orbits = [];

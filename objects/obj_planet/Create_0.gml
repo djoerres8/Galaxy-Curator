@@ -11,7 +11,7 @@ is_held = 0; // is the user currently holding onto the planet
 
 // traveling to orbit/bench
 is_traveling = 0; // to prevent teleporting to locations when releasing the mouse, we will have traveling frames
-travel_speed = 5;
+travel_speed = 10;
 travel_destination = { x: 0, y: 0 };
 destination = "bench"; // can be bench or orbit. alweays starts as bench just cause.
 
@@ -30,6 +30,7 @@ radius = 0; // reset when applying visual update
 
 // VALIDATION
 is_passing = 0;
+failing_msg = ""; // store the reason the planet is failing
 orbit_index = 0; // which orbit in the level is being orbited
 
 
