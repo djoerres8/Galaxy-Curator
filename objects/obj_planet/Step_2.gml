@@ -52,7 +52,7 @@ if(is_held && mouse_check_button_released(mb_left))
 		is_traveling = 1;
 		travel_destination = { x: obj_level_controller.bench_positions[bench_position].x, y: obj_level_controller.bench_positions[bench_position].y };
 		destination = "bench";
-				
+		on_bench = 1;
 	}
 	
 }
