@@ -1,7 +1,8 @@
 // controls level creation
 
-//set current level TODO: set this dynamically based on level select or based on changing levels
-current_level = 1;
+//Use transitionFade to change to next levels
+//set current level, global.current_level set in transitionFade script as parameter (so depends on New game, continue, or level select
+current_level = global.current_level;
 
 // Bench positions for planets not in orbit
 bench_positions = [
