@@ -34,7 +34,8 @@ orbit_index = 0; // which orbit in the level is being orbited
 
 
 //VISUAL FLARE 
-//variables to control bob animation while on bench
+
+//BOB Effect
 bob_speed = random_range(450, 550);
 bob_distance = random_range(.18, .22);
 
