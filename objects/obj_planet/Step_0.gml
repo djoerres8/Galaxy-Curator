@@ -10,7 +10,7 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 	if (in_orbit){
 		array_delete(obj_level_controller.orbits[orbit_index].planets, array_get_index(obj_level_controller.orbits[orbit_index].planets, id), 1);
 		on_bench = 1;
-		LevelValidation(); // validates all planets
+		levelValidation(); // validates all planets
 	}
 	x = mouse_x;
 	y = mouse_y;
@@ -45,7 +45,7 @@ if (is_traveling)
 			
 			// add planet to orbit for validation
 			array_push(obj_level_controller.orbits[orbit_index].planets, id);
-			LevelValidation();
+			levelValidation();
 		}
 		else if (destination == "bench")
 		{

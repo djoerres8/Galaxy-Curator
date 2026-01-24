@@ -2,4 +2,4 @@
 
 var next_room = room_next(room);
 
-TransitionFade(next_room);
+transitionFade(next_room);

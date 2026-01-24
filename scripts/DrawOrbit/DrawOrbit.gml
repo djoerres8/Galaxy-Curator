@@ -1,6 +1,6 @@
 
 //draw the orbit. need to use this method because you cant set thickness of a drawn circle so this is a workaround
-function DrawOrbitEllipse(orbit, thickness, orbit_num){
+function drawOrbitEllipse(orbit, thickness, orbit_num){
 	var radius = orbit.radius;
 	var wobble = sin(current_time * 0.001 + radius) * 0.8; // adds a bit of movement to the orbits so they arent static
 	thickness = 8;
@@ -66,7 +66,7 @@ function getColor(temp){
 
 
 //draw the orbit. need to use this method because you cant set thickness of a drawn circle so this is a workaround
-function DrawOrbitCircle(orbit, thickness){
+function drawOrbitCircle(orbit, thickness){
 	draw_set_circle_precision(64);
 	draw_set_colour(getColor(orbit.temperature)); // Set the desired color
 	for (var i = 0; i < thickness; i++) {

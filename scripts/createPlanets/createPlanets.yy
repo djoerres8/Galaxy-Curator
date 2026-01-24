@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"PlanetCreation",
+  "%Name":"createPlanets",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"PlanetCreation",
+  "name":"createPlanets",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"ShowFailureMessage",
+  "%Name":"showFailureMessage",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"ShowFailureMessage",
+  "name":"showFailureMessage",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

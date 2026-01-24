@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"TransitionFade",
+  "%Name":"transitionFade",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"TransitionFade",
+  "name":"transitionFade",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

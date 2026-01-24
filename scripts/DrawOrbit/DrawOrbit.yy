@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"DrawOrbit",
+  "%Name":"drawOrbit",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"DrawOrbit",
+  "name":"drawOrbit",
   "parent":{
     "name":"DrawScripts",
     "path":"folders/Scripts/DrawScripts.yy",

@@ -1,6 +1,6 @@
 // This is the function that is ran every time the player places a planet on an orbit to check if the system is stable
 //returns true/false
-function LevelValidation(){
+function levelValidation(){
 	
 	show_debug_message("Validating... ");
 	
@@ -18,7 +18,7 @@ function LevelValidation(){
 	//Add individual level validation HERE
 	
 	if (!valid){
-		ShowFailureMessage("fail...");
+		showFailureMessage("fail...");
 		obj_level_controller.level_complete = 0;
 	}else{
 		obj_level_controller.level_complete = 1;
