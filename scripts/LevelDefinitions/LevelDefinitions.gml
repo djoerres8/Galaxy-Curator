@@ -11,7 +11,11 @@ global.LEVELS[0] = {
 		{ temperature: "cold", shape: "spiky", size: "small" , count: 1 },
 		{ temperature: "any", shape: "heart", size: "medium" , count: 2 },
 		{ temperature: "temperate", shape: "circle", size: "large" , count: 1 }
-    ]
+    ],
+	rules: [
+		function (msg) { return limitPlanetsPerOrbit(3, msg); },
+		function (msg) { return noPlanetsOnBench(msg); }
+	],
 };
 
 // LEVEL 1
@@ -21,9 +25,12 @@ global.LEVELS[1] = {
         { temperature: "any", shape: "circle", size: "small" , count: 1 },
 		{ temperature: "any", shape: "circle", size: "medium" , count: 1 },
 		{ temperature: "any", shape: "circle", size: "large" , count: 1 },
-		{ temperature: "hot", shape: "circle", size: "medium" , count: 7 },
+		{ temperature: "hot", shape: "circle", size: "medium" , count: 6 },
     ],
-	rules: [],
+	rules: [
+		function (msg) { return limitPlanetsPerOrbit(3, msg); },
+		function (msg) { return noPlanetsOnBench(msg); }
+	],
 };
 
 // LEVEL 2
@@ -35,5 +42,9 @@ global.LEVELS[2] = {
 		{ temperature: "cold", shape: "circle", size: "large" , count: 3 },
 		{ temperature: "any", shape: "heart", size: "medium" , count: 2 },
 		{ temperature: "temperate", shape: "circle", size: "medium" , count: 1 }
-    ]
+    ],
+	rules: [
+		function (msg) { return limitPlanetsPerOrbit(3, msg); },
+		function (msg) { return noPlanetsOnBench(msg); }
+	],
 };
