@@ -7,32 +7,15 @@ function LevelValidation(){
 	//if this stays true through all check, level passed
 	var valid = true;
 	
-	//get all orbits
-	var orbits = obj_level_controller.orbits;
-	
-	//total orbits
-	var total_orbits = obj_level_controller.num_orbits;
-	
-	
-	// loop through every orbit
-	//for (var i = 0; i < total_orbits; i++) {
-		
-	//	//loop through every planet in the orbit
-	//	for (var j = 0; j < array_length(orbits[i].planets); j++){
-			
-	//		//validate planets in orbit
-	//		validatePlanet(orbits[i].planets[j]);
-	//	}
-		
-	//}
-	
-	
+	// loop through every planet instance in the level and validate it
 	with (obj_planet) {
 		validatePlanet(self);
 		if (!is_passing){
 			valid = false;	
 		}
 	}
+	
+	//Add individual level validation HERE
 	
 	if (!valid){
 		ShowFailureMessage("fail...");
