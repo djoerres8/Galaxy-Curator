@@ -1,12 +1,13 @@
 
 //draw the orbit. need to use this method because you cant set thickness of a drawn circle so this is a workaround
-function DrawOrbit(radius, thickness, color, orbit_num){
+function DrawOrbitEllipse(orbit, thickness, orbit_num){
+	var radius = orbit.radius;
 	var wobble = sin(current_time * 0.001 + radius) * 0.8; // adds a bit of movement to the orbits so they arent static
 	thickness = 8;
 	radius = radius + wobble;
 	var vertical_offset = obj_sun.y + orbit_num * 25; // 25 is the offset value
 	draw_set_circle_precision(64);
-	draw_set_colour(color); // Set the desired color
+	draw_set_colour(getColor(orbit.temperature)); // Set the desired color
 	for (var i = 0; i < thickness; i++) {
 	    // Draw successive 1-pixel wide circles, increasing the radius each time
 		draw_ellipse(
@@ -44,4 +45,32 @@ function DrawOrbit(radius, thickness, color, orbit_num){
 	}
 	
 	draw_set_alpha(1);
+}
+
+
+function getColor(temp){
+	switch (temp)
+	{
+	    case "hot":
+	        return merge_colour(c_white, c_red, .5);
+
+	    case "cold":
+	        return merge_colour(c_white, c_blue, .5);
+
+	    case "temperate":
+	        return merge_colour(c_white, c_green, .5);
+	    default:
+	        return c_white
+	}
+}
+
+
+//draw the orbit. need to use this method because you cant set thickness of a drawn circle so this is a workaround
+function DrawOrbitCircle(orbit, thickness){
+	draw_set_circle_precision(64);
+	draw_set_colour(getColor(orbit.temperature)); // Set the desired color
+	for (var i = 0; i < thickness; i++) {
+	    // Draw successive 1-pixel wide circles, increasing the radius each time
+	    draw_circle(obj_sun.x, obj_sun.y, orbit.radius + i, true); 
+	}
 }
