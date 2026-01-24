@@ -12,8 +12,8 @@
   "name":"obj_planet",
   "overriddenProperties":[],
   "parent":{
-    "name":"Planets",
-    "path":"folders/Objects/Planets.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

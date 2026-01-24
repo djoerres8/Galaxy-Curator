@@ -16,12 +16,14 @@ global.LEVELS[0] = {
 
 // LEVEL 1
 global.LEVELS[1] = {
-    orbits: 3,
+    orbits: 5,
     planets: [
         { temperature: "any", shape: "circle", size: "small" , count: 1 },
 		{ temperature: "any", shape: "circle", size: "medium" , count: 1 },
 		{ temperature: "any", shape: "circle", size: "large" , count: 1 },
-    ]
+		{ temperature: "hot", shape: "circle", size: "medium" , count: 7 },
+    ],
+	rules: [],
 };
 
 // LEVEL 2

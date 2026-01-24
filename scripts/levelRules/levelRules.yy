@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"levelRules",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"levelRules",
+  "parent":{
+    "name":"Validation",
+    "path":"folders/Scripts/Validation.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
