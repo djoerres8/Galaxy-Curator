@@ -14,11 +14,11 @@ for (var i = 0; i < glow_num; i++){
 draw_self();
 
 // draw if planet rules are passing or failing
-draw_set_font(font_debug);
-draw_set_color(c_white);
-draw_set_halign(fa_center);
-draw_set_valign(fa_center);
-draw_text(x, y, string(is_passing));
+//draw_set_font(font_debug);
+//draw_set_color(c_white);
+//draw_set_halign(fa_center);
+//draw_set_valign(fa_center);
+//draw_text(x, y, string(is_passing));
 
 //EYEBALLS
 var pupil_x = mouse_x - x;
@@ -37,3 +37,14 @@ draw_sprite(spr_pupil,0,left_eye_x+pupil_x*eye_rad,eye_height+pupil_y*eye_rad);
 //right_eye
 draw_sprite(spr_eye,0,right_eye_x,eye_height);
 draw_sprite(spr_pupil,0,right_eye_x+pupil_x*eye_rad,eye_height+pupil_y*eye_rad);
+
+//draw expressions
+if (is_held || on_bench){
+	draw_sprite(spr_neutral,0,x,y)
+}else{
+	if (is_passing){
+		draw_sprite(spr_smile,0,x,y)
+		}else{
+		draw_sprite(spr_frown,0,x,y)
+	}
+}
