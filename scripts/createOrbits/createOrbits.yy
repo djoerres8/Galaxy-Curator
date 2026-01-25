@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"createOrbits",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"createOrbits",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

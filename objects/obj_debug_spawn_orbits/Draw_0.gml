@@ -37,5 +37,6 @@ if (mouse_check_button_pressed(mb_right)){
 
 //draw orbits on middle click
 if (mouse_check_button_pressed(mb_middle)){
-	drawOrbitCircle(orbits,1);
+	obj_level_controller.orbits = createOrbits(orbits);
+	//drawOrbitCircle(orbits,1);
 }
