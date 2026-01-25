@@ -74,8 +74,6 @@
     {"id":{"name":"obj_stars","path":"objects/obj_stars/obj_stars.yy",},},
     {"id":{"name":"obj_sun_light","path":"objects/obj_sun_light/obj_sun_light.yy",},},
     {"id":{"name":"obj_sun","path":"objects/obj_sun/obj_sun.yy",},},
-    {"id":{"name":"obj_title_planet","path":"objects/obj_title_planet/obj_title_planet.yy",},},
-    {"id":{"name":"obj_title","path":"objects/obj_title/obj_title.yy",},},
     {"id":{"name":"obj_transition","path":"objects/obj_transition/obj_transition.yy",},},
     {"id":{"name":"ps_sun","path":"particles/ps_sun/ps_sun.yy",},},
     {"id":{"name":"rm_debug","path":"rooms/rm_debug/rm_debug.yy",},},
