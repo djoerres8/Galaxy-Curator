@@ -1,5 +1,5 @@
 //draw sound button
-draw_sprite(spr_sound_on,0,x,y);
+draw_self();
 
 //draw sound off if clicked
 if (global.pause){
