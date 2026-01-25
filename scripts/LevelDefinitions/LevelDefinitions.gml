@@ -2,6 +2,11 @@
 
 global.LEVELS = [];
 
+// Debug Level
+global.LEVELS[30] = {
+    orbits: 0,
+    planets: []
+};
 
 // LEVEL 0
 global.LEVELS[0] = {
