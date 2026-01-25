@@ -7,6 +7,7 @@ global.LEVELS[30] = {
     orbits: 0,
     planets: [],
 	rules: [],
+	tutorial : ""
 };
 
 // LEVEL 0
