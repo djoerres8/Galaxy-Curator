@@ -60,6 +60,7 @@ function validatePlanet(planet){
 	}else{
 		planet.is_passing = 0;
 		planet.failure_msg = error_msg;
+		show_debug_message(planet.shape + "| size: " + string(size_passing) + "| shape: " + string(shape_passing) + "| temp: " + string(temperature_passing));
 	}
 	
 }

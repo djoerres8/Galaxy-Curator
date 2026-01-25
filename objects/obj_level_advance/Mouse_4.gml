@@ -1,6 +1,6 @@
 //advance to next level
 
-max_level = 2;
+max_level = array_length(global.LEVELS);
 
 
 var next_room = rm_level_1;

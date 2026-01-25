@@ -3,7 +3,12 @@
 function limitPlanetsPerOrbit(limit, msg){
 	
 	if (msg){
-		return "Every Orbit may have no more than " + string(limit) + " Planets in them.";
+		if (limit == 1){
+			return "Every Orbit may have no more than " + string(limit) + " Planet in them.";
+		}else{
+			return "Every Orbit may have no more than " + string(limit) + " Planets in them.";
+		}
+		
 	}
 	
 	//loop through every orbit
@@ -11,6 +16,30 @@ function limitPlanetsPerOrbit(limit, msg){
 		
 		// make sure the number of planets in the orbit is <= limit
 		if (array_length(obj_level_controller.orbits[i].planets) > limit){
+			return 0;
+		}
+	}
+	
+	return 1;
+}
+
+//Limit Number of planets per orbit
+function forcePlanetsPerOrbit(limit, msg){
+	
+	if (msg){
+		if (limit == 1){
+			return "Every Orbit must have exactly " + string(limit) + " Planet.";
+		}else{
+			return "Every Orbit must have exactly " + string(limit) + " Planets.";
+		}
+		
+	}
+	
+	//loop through every orbit
+	for (var i = 0; i < obj_level_controller.num_orbits; i++){	
+		
+		// make sure the number of planets in the orbit is == limit
+		if (array_length(obj_level_controller.orbits[i].planets)  !=  limit){
 			return 0;
 		}
 	}
