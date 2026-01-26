@@ -1,5 +1,13 @@
 //spawn orbits
-obj_level_controller.orbits = createOrbits(obj_debug_set_orbits.orbits);
+obj_level_controller.planet.orbit_index = obj_level_controller.planet.orbit_index-1
+if (obj_debug_set_orbits.orbits < 7){
+	obj_level_controller.orbits = createOrbits(obj_debug_set_orbits.orbits);
+}
+else{
+	obj_debug_set_orbits.orbits = 6;
+	obj_level_controller.orbits = createOrbits(obj_debug_set_orbits.orbits);
+}
+
 
 //set planet parameters
 

@@ -19,7 +19,8 @@
   "height":64,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"6baa7ee1-172b-4b78-adcb-807766ebcc87","blendMode":0,"displayName":"default","isLocked":false,"name":"6baa7ee1-172b-4b78-adcb-807766ebcc87","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"b9ff3205-0f83-47a8-8f0a-f9750273ce49","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"b9ff3205-0f83-47a8-8f0a-f9750273ce49","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"6baa7ee1-172b-4b78-adcb-807766ebcc87","blendMode":0,"displayName":"default","isLocked":false,"name":"6baa7ee1-172b-4b78-adcb-807766ebcc87","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
   "name":"spr_planet_circle",
   "nineSlice":null,

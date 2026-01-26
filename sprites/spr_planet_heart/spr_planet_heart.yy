@@ -19,7 +19,9 @@
   "height":64,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"e0f5e3ac-d365-438f-9d2f-62a566230e87","blendMode":0,"displayName":"default","isLocked":false,"name":"e0f5e3ac-d365-438f-9d2f-62a566230e87","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"aa8feed4-8039-4de8-ad2d-8db9c1734f14","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"aa8feed4-8039-4de8-ad2d-8db9c1734f14","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"da4192b0-051a-4128-99d1-db40d83b7990","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"da4192b0-051a-4128-99d1-db40d83b7990","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
+    {"$GMImageLayer":"","%Name":"e0f5e3ac-d365-438f-9d2f-62a566230e87","blendMode":0,"displayName":"default","isLocked":false,"name":"e0f5e3ac-d365-438f-9d2f-62a566230e87","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
   "name":"spr_planet_heart",
   "nineSlice":null,
