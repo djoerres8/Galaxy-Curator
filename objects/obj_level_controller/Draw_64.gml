@@ -1,5 +1,5 @@
 //draw the rules for the level
-var level_rules = global.LEVELS[obj_level_controller.current_level].rules;
+var level_rules = global.LEVELS[global.CURRENT_LEVEL].rules;
 var y_placement = room_height - 500;
 
 draw_set_font(font_rules);

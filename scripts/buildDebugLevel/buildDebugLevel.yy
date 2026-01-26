@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"buildDebugLevel",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"buildDebugLevel",
+  "parent":{
+    "name":"LevelCreation",
+    "path":"folders/Scripts/LevelCreation.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

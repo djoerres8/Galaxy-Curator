@@ -8,8 +8,10 @@ function validatePlanet(planet){
 	var size_passing = 1;
 	var error_msg = "failing...";
 	
+	var orbits = obj_level_controller.orbits; // all information about planerts on each orbit of the level lives in here
+	
 	//TEMPERATURE
-	if (obj_level_controller.orbits[planet.orbit_index].temperature != planet.temperature && planet.temperature != "any"){
+	if (orbits[planet.orbit_index].temperature != planet.temperature && planet.temperature != "any"){
 		temperature_passing = 0;
 	}
 	
@@ -17,12 +19,12 @@ function validatePlanet(planet){
 	// SHAPE
 	
 	//spikey need to be alone on orbit
-	if (planet.shape == "spiky" && array_length(obj_level_controller.orbits[planet.orbit_index].planets) > 1){
+	if (planet.shape == "spiky" && array_length(orbits[planet.orbit_index].planets) > 1){
 		shape_passing = 0;
 	}
 	
 	//heart needs at least 1 pal
-	if (planet.shape == "heart" && array_length(obj_level_controller.orbits[planet.orbit_index].planets) == 1){
+	if (planet.shape == "heart" && array_length(orbits[planet.orbit_index].planets) == 1){
 		shape_passing = 0;
 	}
 	
@@ -32,11 +34,11 @@ function validatePlanet(planet){
 		
 		//loop through planets in outer orbit
 		//if not max orbit, check outer orbit
-		if (planet.orbit_index+1 != obj_level_controller.level_data.number_of_orbits){
-			for (var i = 0; i <  array_length(obj_level_controller.orbits[planet.orbit_index+1].planets); i++){
+		if (planet.orbit_index+1 != array_length(orbits)){
+			for (var i = 0; i <  array_length(orbits[planet.orbit_index+1].planets); i++){
 				if (
-				(obj_level_controller.orbits[planet.orbit_index+1].planets[i].size == "small" && planet.size == "large") ||
-				(obj_level_controller.orbits[planet.orbit_index+1].planets[i].size == "large" && planet.size == "small")){
+				(orbits[planet.orbit_index+1].planets[i].size == "small" && planet.size == "large") ||
+				(orbits[planet.orbit_index+1].planets[i].size == "large" && planet.size == "small")){
 					size_passing = 0;
 				}
 			}
@@ -45,10 +47,10 @@ function validatePlanet(planet){
 		//loop through planets in inner orbit
 		//if not min orbit, check inner orbit
 		if (planet.orbit_index != 0){
-			for (var i = 0; i <  array_length(obj_level_controller.orbits[planet.orbit_index-1].planets); i++){	
+			for (var i = 0; i <  array_length(orbits[planet.orbit_index-1].planets); i++){	
 				if (
-				(obj_level_controller.orbits[planet.orbit_index-1].planets[i].size == "small" && planet.size == "large") ||
-				(obj_level_controller.orbits[planet.orbit_index-1].planets[i].size == "large" && planet.size == "small")){
+				(orbits[planet.orbit_index-1].planets[i].size == "small" && planet.size == "large") ||
+				(orbits[planet.orbit_index-1].planets[i].size == "large" && planet.size == "small")){
 					size_passing = 0;
 				}
 			}

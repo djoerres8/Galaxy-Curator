@@ -17,7 +17,8 @@ destination = "bench"; // can be bench or orbit. alweays starts as bench just ca
 
 // on bench
 on_bench = 1; // planet in on bench
-bench_position = 0; // which seat of the bench is th eplanet on?
+bench_x = 0;
+bench_y = 0;
 
 // variables to control planet when in orbit
 in_orbit = 0; // planet is in orbit

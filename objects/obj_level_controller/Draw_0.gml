@@ -23,4 +23,4 @@ draw_set_font(font_rules);
 draw_set_color(c_white);
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
-draw_text(room_width/2, 50, level_data.tutorial );
+draw_text(room_width/2, 50, global.LEVELS[global.CURRENT_LEVEL].tutorial );
