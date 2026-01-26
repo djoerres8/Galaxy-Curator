@@ -4,7 +4,7 @@ global.LEVELS = [];
 
 // Debug Level
 global.LEVELS[30] = {
-    orbits: 0,
+    number_of_orbits: 0,
     planets: [],
 	rules: [],
 	tutorial : ""
@@ -12,7 +12,7 @@ global.LEVELS[30] = {
 
 // LEVEL 0
 global.LEVELS[0] = {
-    orbits: 1,
+    number_of_orbits: 1,
     planets: [],
 	rules: [],
 	tutorial : "Press the wierd purple button in the corner to go to the first level."
@@ -20,7 +20,7 @@ global.LEVELS[0] = {
 
 // LEVEL 1
 global.LEVELS[1] = {
-    orbits: 1,
+    number_of_orbits: 1,
     planets: [
         { temperature: "any", shape: "circle", size: "medium" , count: 1 },
     ],
@@ -32,7 +32,7 @@ global.LEVELS[1] = {
 
 // LEVEL 2
 global.LEVELS[2] = {
-    orbits: 3,
+    number_of_orbits: 3,
     planets: [
         { temperature: "any", shape: "circle", size: "medium" , count: 3 },
     ],
@@ -45,7 +45,7 @@ global.LEVELS[2] = {
 
 // LEVEL 3
 global.LEVELS[3] = {
-    orbits: 3,
+    number_of_orbits: 3,
     planets: [
         { temperature: "hot", shape: "circle", size: "medium" , count: 1 },
     ],
@@ -57,7 +57,7 @@ global.LEVELS[3] = {
 
 // LEVEL 4
 global.LEVELS[4] = {
-    orbits: 3,
+    number_of_orbits: 3,
     planets: [
         { temperature: "hot", shape: "circle", size: "medium" , count: 1 },
 		{ temperature: "cold", shape: "circle", size: "medium" , count: 1 },
@@ -72,7 +72,7 @@ global.LEVELS[4] = {
 
 // LEVEL 5
 global.LEVELS[5] = {
-    orbits: 5,
+    number_of_orbits: 5,
     planets: [
         { temperature: "hot", shape: "spiky", size: "medium" , count: 2 },
 		{ temperature: "cold", shape: "spiky", size: "medium" , count: 1 },
@@ -85,7 +85,7 @@ global.LEVELS[5] = {
 
 // LEVEL 6
 global.LEVELS[6] = {
-    orbits: 4,
+    number_of_orbits: 4,
     planets: [
         { temperature: "any", shape: "heart", size: "medium" , count: 1 },
 		{ temperature: "cold", shape: "spiky", size: "medium" , count: 1 },
@@ -98,7 +98,7 @@ global.LEVELS[6] = {
 
 // LEVEL 7
 global.LEVELS[7] = {
-    orbits: 6,
+    number_of_orbits: 6,
     planets: [
         { temperature: "any", shape: "heart", size: "medium" , count: 2 },
 		{ temperature: "cold", shape: "spiky", size: "medium" , count: 2 },
@@ -114,7 +114,7 @@ global.LEVELS[7] = {
 
 // LEVEL 20
 global.LEVELS[20] = {
-    orbits: 3,
+    number_of_orbits: 3,
     planets: [
         { temperature: "hot", shape: "circle", size: "medium" , count: 1 },
 		{ temperature: "hot", shape: "spiky", size: "medium" , count: 1 },

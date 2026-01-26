@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"LevelDefinitions",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"LevelCreation",
+    "path":"folders/Scripts/LevelCreation.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

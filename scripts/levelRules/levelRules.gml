@@ -12,7 +12,7 @@ function limitPlanetsPerOrbit(limit, msg){
 	}
 	
 	//loop through every orbit
-	for (var i = 0; i < obj_level_controller.num_orbits; i++){	
+	for (var i = 0; i < obj_level_controller.level_data.number_of_orbits; i++){	
 		
 		// make sure the number of planets in the orbit is <= limit
 		if (array_length(obj_level_controller.orbits[i].planets) > limit){
@@ -36,7 +36,7 @@ function forcePlanetsPerOrbit(limit, msg){
 	}
 	
 	//loop through every orbit
-	for (var i = 0; i < obj_level_controller.num_orbits; i++){	
+	for (var i = 0; i < obj_level_controller.level_data.number_of_orbits; i++){	
 		
 		// make sure the number of planets in the orbit is == limit
 		if (array_length(obj_level_controller.orbits[i].planets)  !=  limit){

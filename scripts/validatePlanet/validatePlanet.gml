@@ -32,7 +32,7 @@ function validatePlanet(planet){
 		
 		//loop through planets in outer orbit
 		//if not max orbit, check outer orbit
-		if (planet.orbit_index+1 != obj_level_controller.num_orbits){
+		if (planet.orbit_index+1 != obj_level_controller.level_data.number_of_orbits){
 			for (var i = 0; i <  array_length(obj_level_controller.orbits[planet.orbit_index+1].planets); i++){
 				if (
 				(obj_level_controller.orbits[planet.orbit_index+1].planets[i].size == "small" && planet.size == "large") ||

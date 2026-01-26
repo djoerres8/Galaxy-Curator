@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"createOrbits",
+  "%Name":"buildLevel",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"createOrbits",
+  "name":"buildLevel",
   "parent":{
     "name":"LevelCreation",
     "path":"folders/Scripts/LevelCreation.yy",
