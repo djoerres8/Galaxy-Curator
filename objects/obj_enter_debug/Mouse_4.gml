@@ -1,5 +1,5 @@
  //Inherit the parent event
 event_inherited();
-global.current_level = 30;
-current_level = global.current_level;
+global.CURRENT_LEVEL = 30;
+current_level = global.CURRENT_LEVEL;
 transitionFade(rm_debug,current_level);

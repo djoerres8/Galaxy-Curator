@@ -53,7 +53,6 @@ glow_scale = [1.05, 1.1, 1.15, 1.2, 1.25];
 glow_alpha = [.5, .4, .3, .2, .1];
 
 //PLANET VISUAL
-planet_color = c_gray;
 function applyVisuals() {
 
     // Shape → sprite
@@ -61,6 +60,7 @@ function applyVisuals() {
         case "circle": sprite_index = spr_planet_circle; break;
         case "spiky":  sprite_index = spr_planet_spiky;  break;
         case "heart":  sprite_index = spr_planet_heart;  break;
+		default: sprite_index = spr_planet_circle;
     }
 
     // Temperature → color tint
@@ -69,6 +69,7 @@ function applyVisuals() {
         case "cold":       planet_color = c_blue;   break;
         case "temperate":  planet_color = c_green;  break;
         case "any":        planet_color = c_gray;   break;
+		default:  planet_color = c_gray;
     }
 	image_blend = planet_color;
 	
@@ -77,6 +78,7 @@ function applyVisuals() {
         case "small":  image_xscale = 0.7; image_yscale = 0.7; break;
         case "medium": image_xscale = 1.0; image_yscale = 1.0; break;
         case "large":  image_xscale = 1.4; image_yscale = 1.4; break;
+		default:  image_xscale = 1.0; image_yscale = 1.0;
     }
 	
 	radius = sprite_width / 2; // return radius of planet to use in calculating what orbit to snap to.

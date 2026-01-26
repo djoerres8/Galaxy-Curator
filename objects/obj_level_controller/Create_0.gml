@@ -2,7 +2,7 @@
 
 //Use transitionFade to change to next levels
 //set current level, global.current_level set in transitionFade script as parameter (so depends on New game, continue, or level select
-current_level = global.current_level;
+current_level = global.CURRENT_LEVEL;
 
 // Bench positions for planets not in orbit
 bench_positions = [

@@ -1,18 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_sun",
+  "%Name":"obj_menu_go_to_level_x",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_sun",
+  "name":"obj_menu_go_to_level_x",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Main_Menu",
+    "path":"folders/Objects/Menu_Buttons/Main_Menu.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_menu_button",
+    "path":"objects/obj_menu_button/obj_menu_button.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_sun_sm",
-    "path":"sprites/spr_sun_sm/spr_sun_sm.yy",
+    "name":"spr_menu_button",
+    "path":"sprites/spr_menu_button/spr_menu_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

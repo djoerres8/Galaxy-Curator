@@ -7,14 +7,14 @@ function transitionFade(_room,_level) {
             fading_out = true; // Start the fade out
             target_room = _room; // Set the target room
 		}
-		//If no level, then default to room 0.  Otherwise set to level passed in
+		//If no level, then default to room 1.  Otherwise set to level passed in
 		if (_level != undefined) 
 		{
-			global.current_level = _level;
+			global.CURRENT_LEVEL = _level;
 		}
 		else 
 		{
-			global.current_level = 0;
+			global.CURRENT_LEVEL = 1;
 		}
     }
 }

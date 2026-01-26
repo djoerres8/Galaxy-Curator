@@ -14,7 +14,7 @@ if(is_held && mouse_check_button_released(mb_left))
 	var distance_from_sun = point_distance(mouse_x, mouse_y, obj_sun.x, obj_sun.y);
 	
 	// if the planet is within snapping range (is at least touching the outer orbit)
-	if (distance_from_sun <= array_last(obj_level_controller.orbits).radius + radius)
+	if (distance_from_sun <= array_last(obj_level_controller.orbits).radius + (radius *3))
 	{
 		
 		//find which orbit the planet is closest to. (this chunk is a little confusing, easy to draw out though)
