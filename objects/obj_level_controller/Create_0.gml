@@ -1,4 +1,4 @@
-//call buildLevel given current level to sett all variables
+//call buildLevel given current level to set all variables
 buildLevel(global.CURRENT_LEVEL);
 
 // VALIDATION VARIABLES

@@ -76,9 +76,9 @@ function applyVisuals() {
 	
 	// Size → scale
     switch (size) {
-        case "small":  image_xscale = 0.7; image_yscale = 0.7; break;
+        case "small":  image_xscale = 0.5; image_yscale = 0.5; break;
         case "medium": image_xscale = 1.0; image_yscale = 1.0; break;
-        case "large":  image_xscale = 1.4; image_yscale = 1.4; break;
+        case "large":  image_xscale = 1.8; image_yscale = 1.8; break;
 		default:  image_xscale = 1.0; image_yscale = 1.0;
     }
 	

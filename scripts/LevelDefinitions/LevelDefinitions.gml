@@ -98,18 +98,45 @@ global.LEVELS[6] = {
 
 // LEVEL 7
 global.LEVELS[7] = {
+    number_of_orbits: 3,
+    planets: [
+        { temperature: "any", shape: "circle", size: "small" , count: 4 },
+		{ temperature: "any", shape: "circle", size: "large" , count: 2 },
+    ],
+	rules: [
+		function (msg) { return limitPlanetsPerOrbit(2, msg); },
+	],
+	tutorial : "Big planets take up 2 spaces in an orbit, while small planets take up 1/2 a space."
+};
+
+// LEVEL 8
+global.LEVELS[8] = {
+    number_of_orbits: 3,
+    planets: [
+        { temperature: "hot", shape: "circle", size: "small" , count: 1 },
+		{ temperature: "temperate", shape: "spiky", size: "large" , count: 1 },
+		{ temperature: "cold", shape: "heart", size: "medium" , count: 2 },
+    ],
+	rules: [
+		function (msg) { return limitPlanetsPerOrbit(2, msg); },
+	],
+	tutorial : "Planets can have any combination of a size, temperature, and shape."
+};
+
+// LEVEL 9
+global.LEVELS[9] = {
     number_of_orbits: 6,
     planets: [
-        { temperature: "any", shape: "heart", size: "medium" , count: 2 },
+        { temperature: "any", shape: "heart", size: "small" , count: 4 },
 		{ temperature: "cold", shape: "spiky", size: "medium" , count: 2 },
 		{ temperature: "temperate", shape: "circle", size: "medium" , count: 1 },
 		{ temperature: "hot", shape: "heart", size: "medium" , count: 4 },
-		{ temperature: "temperate", shape: "spiky", size: "medium" , count: 1 },
+		{ temperature: "temperate", shape: "spiky", size: "large" , count: 1 },
     ],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(3, msg); },
 	],
-	tutorial : ""
+	tutorial : "This is a test of a slightly larger level"
 };
 
 // LEVEL 20

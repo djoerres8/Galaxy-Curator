@@ -13,9 +13,21 @@ function limitPlanetsPerOrbit(limit, msg){
 	
 	//loop through every orbit
 	for (var i = 0; i < array_length(obj_level_controller.orbits); i++){	
+				
+		var num_planets_activley_in_orbit = 0;
+		
+		//loop through the planets in orbit and check their sizes to increment num in orbit
+		for (var j = 0; j < array_length(obj_level_controller.orbits[i].planets); j++){
+			switch (obj_level_controller.orbits[i].planets[j].size){
+				case "large":  num_planets_activley_in_orbit += 2;  break;
+				case "medium": num_planets_activley_in_orbit += 1;  break;
+				case "small":  num_planets_activley_in_orbit += .5; break;
+				default: num_planets_activley_in_orbit += 1; break;	
+			}
+		}
 		
 		// make sure the number of planets in the orbit is <= limit
-		if (array_length(obj_level_controller.orbits[i].planets) > limit){
+		if (num_planets_activley_in_orbit > limit){
 			return 0;
 		}
 	}
@@ -38,8 +50,20 @@ function forcePlanetsPerOrbit(limit, msg){
 	//loop through every orbit
 	for (var i = 0; i < array_length(obj_level_controller.orbits); i++){	
 		
-		// make sure the number of planets in the orbit is == limit
-		if (array_length(obj_level_controller.orbits[i].planets)  !=  limit){
+		var num_planets_activley_in_orbit = 0;
+		
+		//loop through the planets in orbit and check their sizes to increment num in orbit
+		for (var j = 0; j < array_length(obj_level_controller.orbits[i].planets); j++){
+			switch (obj_level_controller.orbits[i].planets[j].size){
+				case "large":  num_planets_activley_in_orbit += 2;  break;
+				case "medium": num_planets_activley_in_orbit += 1;  break;
+				case "small":  num_planets_activley_in_orbit += .5; break;
+				default: num_planets_activley_in_orbit += 1; break;	
+			}
+		}
+		
+		// make sure the number of planets in the orbit is <= limit
+		if (num_planets_activley_in_orbit != limit){
 			return 0;
 		}
 	}

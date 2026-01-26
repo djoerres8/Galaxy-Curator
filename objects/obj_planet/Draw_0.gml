@@ -11,10 +11,10 @@ for (var i = 0; i < glow_num; i++){
 }
 
 // draw sprite
-var sun_x = obj_sun.x;
-var sun_y = obj_sun.y;
-image_angle = point_direction(sun_x, sun_y, x, y) + 60;
-draw_sprite_ext(sprite_index, image_index, x, y, 1, 1, image_angle, planet_color, 1);
+draw_self();
+
+//ROTATE SHADOW
+image_angle = point_direction(obj_sun.x, obj_sun.y, x, y) + 60;
 
 // draw if planet rules are passing or failing
 //draw_set_font(font_debug);
