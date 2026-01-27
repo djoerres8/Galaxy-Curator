@@ -20,7 +20,9 @@ global.LEVELS[30] = {
 // LEVEL 0
 global.LEVELS[0] = {
     number_of_orbits: 1,
-    planets: [],
+    planets: [
+        { temperature: "any", shape: "circle", size: "medium" , count: 1 },
+    ],
 	moons: [],
 	rules: [],
 	tutorial : "Press the wierd purple button in the corner to go to the first level."
@@ -162,6 +164,77 @@ global.LEVELS[9] = {
 		function (msg) { return limitPlanetsPerOrbit(3, msg); },
 	],
 	tutorial : "This is a test of a slightly larger level"
+};
+
+// LEVEL 10
+global.LEVELS[10] = {
+    number_of_orbits: 5,
+    planets: [
+        { temperature: "hot", shape: "circle", size: "small" , count: 3 },
+		{ temperature: "hot", shape: "circle", size: "medium" , count: 1 },
+		{ temperature: "temperate", shape: "heart", size: "small" , count: 1 },
+		{ temperature: "any", shape: "spiky", size: "medium" , count: 1 },
+		{ temperature: "any", shape: "circle", size: "large" , count: 1 },
+		{ temperature: "any", shape: "heart", size: "medium" , count: 1 },
+    ],
+	rules: [
+		function (msg) { return limitPlanetsPerOrbit(2, msg); },
+		function (msg) { return noPlanetsOnBench(msg); }
+	],
+	tutorial : ""
+};
+
+// LEVEL 11
+global.LEVELS[11] = {
+    number_of_orbits: 4,
+    planets: [
+        { temperature: "hot", shape: "circle", size: "small" , count: 5 },
+		{ temperature: "any", shape: "spiky", size: "medium" , count: 1 },
+		{ temperature: "cold", shape: "circle", size: "large" , count: 1 },
+		{ temperature: "any", shape: "heart", size: "medium" , count: 2 },
+		{ temperature: "temperate", shape: "circle", size: "medium" , count: 1 }
+    ],
+	rules: [
+		function (msg) { return limitPlanetsPerOrbit(3, msg); },
+		function (msg) { return noPlanetsOnBench(msg); }
+	],
+	tutorial : ""
+};
+
+// LEVEL 12
+global.LEVELS[12] = {
+    number_of_orbits: 6,
+    planets: [
+        { temperature: "hot", shape: "circle", size: "medium" , count: 1 },
+		{ temperature: "hot", shape: "spiky", size: "medium" , count: 1 },
+		{ temperature: "cold", shape: "circle", size: "large" , count: 2 },
+		{ temperature: "any", shape: "heart", size: "small" , count: 2 },
+		{ temperature: "temperate", shape: "circle", size: "medium" , count: 1 },
+		{ temperature: "any", shape: "spiky", size: "large" , count: 1 },
+    ],
+	rules: [
+		function (msg) { return limitPlanetsPerOrbit(2, msg); },
+		function (msg) { return noPlanetsOnBench(msg); }
+	],
+	tutorial : ""
+};
+
+// LEVEL 12
+global.LEVELS[12] = {
+    number_of_orbits: 4,
+    planets: [
+        { temperature: "hot", shape: "circle", size: "medium" , count: 1 },
+		{ temperature: "hot", shape: "spiky", size: "medium" , count: 1 },
+		{ temperature: "cold", shape: "circle", size: "small" , count: 1 },
+		{ temperature: "any", shape: "heart", size: "small" , count: 2 },
+		{ temperature: "temperate", shape: "circle", size: "medium" , count: 1 },
+		{ temperature: "any", shape: "spiky", size: "small" , count: 1 },
+    ],
+	rules: [
+		function (msg) { return limitPlanetsPerOrbit(1, msg); },
+		function (msg) { return noPlanetsOnBench(msg); }
+	],
+	tutorial : ""
 };
 
 // LEVEL 20
