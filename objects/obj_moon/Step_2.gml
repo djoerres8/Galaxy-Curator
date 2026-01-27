@@ -13,21 +13,34 @@ if(is_held && mouse_check_button_released(mb_left))
 	// check if moon is overlapping any planet
     var planet = instance_place(x, y, obj_planet);
 	
-	// if the moon is within the planet
+	// if the moon is within the planet & is compatable
 	if (planet != noone)
 	{
 		
-		// draw a line from the moon to the planet
-		var ang = point_direction(planet.x, planet.y, x, y);	
+		if (planet.checkMoonCompatable(self)){
+			// draw a line from the moon to the planet
+			var ang = point_direction(planet.x, planet.y, x, y);	
 		
-		//set planet on its way to the destination
-		is_traveling = 1;
-		travel_destination = { x: planet.x + lengthdir_x(planet.radius, ang), y: planet.y + lengthdir_y(planet.radius, ang) };
-		destination = "planet";
+			//set planet on its way to the destination
+			is_traveling = 1;
+			travel_destination = { x: planet.x + lengthdir_x(planet.radius, ang), y: planet.y + lengthdir_y(planet.radius, ang) };
+			destination = "planet";
 		
-		//set orbit_radius to know which orbit the planet is in.
-		orbit_radius = planet.radius + radius + orbit_distance;
-		planet_id = planet;
+			//set orbit_radius to know which orbit the planet is in.
+			orbit_radius = planet.radius + radius + orbit_distance;
+			planet_id = planet;
+			planet.addMoon(self);
+		}else{
+			
+			//TODO: display error message
+			show_debug_message("moon not compatable");
+			
+			//set planet on its way back to the bench
+			is_traveling = 1;
+			travel_destination = { x: bench_x, y: bench_y };
+			destination = "bench";
+			on_bench = 1;
+		}
 		
 	}
 	// return planet to bench

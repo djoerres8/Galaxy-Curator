@@ -29,7 +29,6 @@ function levelValidation(){
 		obj_level_controller.level_complete = 0;
 	}else{
 		obj_level_controller.level_complete = 1;
-		show_debug_message("Level Complete");
 		instance_create_layer(window_get_width()/2,window_get_height()/2,"Level_advance",obj_level_advance);
 		saveGame();
 	}

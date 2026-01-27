@@ -4,6 +4,11 @@ temperature = "any";
 size = "medium";
 shape = "circle";
 
+// save original shape in case of moon modification 
+og_shape = "circle";
+og_temperature = "any";
+og_size = "medium";
+
 //MOONS
 moons = [];
 
@@ -86,4 +91,106 @@ function applyVisuals() {
     }
 	
 	radius = sprite_width / 2; // return radius of planet to use in calculating what orbit to snap to.
+}
+
+//create a callable function that will apply moon modifiers
+function addMoon(moon){
+	
+	// add moon to planet's moons
+	array_push(moons, moon.id);
+	
+	switch(moon.modifier){
+		case "spiky":   shape = "spiky";  break;
+		case "heart": shape = "heart"; break;
+		case "circle": shape = "circle"; break;
+		case "hotter":
+			switch(temperature){
+				case "cold": temperature = "temperate" break;
+				case "temperate": temperature = "hot" break;
+				case "any": temperature = "hot";
+			} 
+			break;
+		case "colder":  
+			switch(temperature){
+				case "hot": temperature = "temperate" break;
+				case "temperate": temperature = "cold" break;
+				case "any": temperature = "cold";
+			} 
+			break;
+		case "smaller": 
+			switch(size){
+				case "medium": size = "small" break;
+				case "large": size = "medium" break;
+			} 
+			break;
+		case "larger":  
+			switch(size){
+				case "small": size = "medium" break;
+				case "medium": size = "large" break;
+			} 
+			break;
+	}
+	
+}
+
+function removeMoon(moon){
+	
+	//remove moon from planet's moons
+	array_delete(moons, array_get_index(moons, moon.id), 1);
+	
+	switch(moon.modifier){
+		case "spiky": shape = og_shape;  break;
+		case "heart": shape = og_shape; break;
+		case "circle": shape = og_shape; break;
+		case "hotter":
+			if (og_temperature == "any"){
+				temperature = "any";
+			}else{
+				switch(temperature){
+					case "hot": temperature = "temperate" break;
+					case "temperate": temperature = "cold" break;
+				}
+			}
+			break;
+		case "colder":  
+			if (og_temperature == "any"){
+				temperature = "any";
+			}else{
+				switch(temperature){
+					case "cold": temperature = "temperate" break;
+					case "temperate": temperature = "hot" break;
+				}
+			}
+			break;
+		case "smaller": 
+			switch(size){
+				case "small": size = "medium" break;
+				case "medium": size = "large" break;
+			} 
+			break;
+		case "larger":  
+			switch(size){
+				case "medium": size = "small" break;
+				case "large": size = "medium" break;
+			} 
+			break;
+	}
+}
+
+function checkMoonCompatable(moon){
+	
+	if (moon.modifier == shape){ show_debug_message("1") return 0;} // cant place the same shape modifier on a planet
+	else if ((moon.modifier == "circle" || moon.modifier == "spiky" || moon.modifier == "heart") && shape != og_shape){ show_debug_message("2") return 0;} // multiple shape modifier moons cannot be on the same planet
+	else if (moon.modifier == "hotter" && temperature == "hot"){ show_debug_message("3") return 0;} // cant make a hot planet hotter
+	else if (moon.modifier == "colder" && temperature == "cold"){ show_debug_message("4") return 0;} // cant make a cold planet colder
+	else if ((moon.modifier == "colder" || moon.modifier == "hotter") && og_temperature != temperature && (og_temperature == "any" || og_temperature == "temperate")){ show_debug_message("5") return 0;} // cant adjust an "any" or "temperate" temp planet more than once
+	else if (moon.modifier == "colder" && og_temperature == "cold"){ show_debug_message("6") return 0;} // cant add a cold moon to a cold planet
+	else if (moon.modifier == "hotter" && og_temperature == "hot"){ show_debug_message("7") return 0;} // cant add a cold moon to a cold planet
+	else if (moon.modifier == "smaller" && size == "small"){ show_debug_message("8") return 0;} // cant make a small planet smaller
+	else if (moon.modifier == "larger" && size == "large"){ show_debug_message("9") return 0;} // cant make a large planet larger
+	else if ((moon.modifier == "larger" || moon.modifier == "smaller") && og_size != size && og_size == "medium"){ show_debug_message("10") return 0;} // medium planets can only have 1 size modifier
+	else if (moon.modifier == "larger" && og_size == "large"){ show_debug_message("11") return 0;} // cant increase size of planets that started large
+	else if (moon.modifier == "smaller" && og_size == "small"){ show_debug_message("12") return 0;} // cant decrease size of planets that started small
+	
+	else return 1;
 }

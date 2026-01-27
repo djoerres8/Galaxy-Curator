@@ -50,8 +50,11 @@ function createPlanet(planet_def, planet_num){
 	
 	//set planet attributes
 	new_planet.temperature = planet_def.temperature;
+	new_planet.og_temperature = planet_def.temperature; // save original temperature in case of moon modification
     new_planet.shape       = planet_def.shape;
+	new_planet.og_shape    = planet_def.shape; // save original shape in case of moon modification
     new_planet.size        = planet_def.size;
+	new_planet.og_size     = planet_def.size;
 	new_planet.applyVisuals();
 }
 

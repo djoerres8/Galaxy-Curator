@@ -35,7 +35,6 @@ if (is_traveling)
         x = travel_destination.x;
         y = travel_destination.y;
         is_traveling = 0;
-		show_debug_message("done traveling");
 		
 		if (destination == "orbit")
 		{
@@ -71,3 +70,5 @@ if (in_orbit)
 	x = obj_sun.x + lengthdir_x(orbit_radius, orbit_angle);
 	y = obj_sun.y + lengthdir_y(orbit_radius, orbit_angle);
 }
+
+

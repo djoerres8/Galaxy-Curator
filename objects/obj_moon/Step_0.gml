@@ -8,7 +8,7 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 {
 	//remove from planet
 	if (on_planet){
-		array_delete(planet_id.moons, array_get_index(planet_id.moons, id), 1);
+		planet_id.removeMoon(self);
 		on_bench = 1;
 		levelValidation(); // validates all planets
 	}
@@ -41,9 +41,6 @@ if (is_traveling)
 			//mark planet as in_orbit, set orbit_radius, validate level
 			on_planet = 1;
 			orbit_angle = point_direction(planet_id.x, planet_id.y, x, y); // re-calculate angle to sun	
-			
-			// add moon to planet's moons
-			array_push(planet_id.moons, id);
 			levelValidation();
 		}
 		else if (destination == "bench")
