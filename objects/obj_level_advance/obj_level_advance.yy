@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_level_success",
-    "path":"sprites/spr_level_success/spr_level_success.yy",
+    "name":"spr_menu_button",
+    "path":"sprites/spr_menu_button/spr_menu_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,
