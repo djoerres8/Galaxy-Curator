@@ -1,7 +1,7 @@
 //functions to save/load levels you have complete
 function saveGame(){
 	//Set progress to latest level completed
-	if (global.CURRENT_LEVEL <= global.progress){
+	if (global.CURRENT_LEVEL = global.progress){
 			global.progress = global.CURRENT_LEVEL+1;
 	}
 	//create a save file

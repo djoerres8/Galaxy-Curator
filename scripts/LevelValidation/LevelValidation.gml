@@ -29,7 +29,8 @@ function levelValidation(){
 		obj_level_controller.level_complete = 0;
 	}else{
 		obj_level_controller.level_complete = 1;
-		instance_create_layer(window_get_width()/2,window_get_height()/2,"Level_advance",obj_level_advance);
+		instance_create_layer(room_width/2,room_height/2,"Level_advance",obj_level_success);
+		instance_create_depth(room_width/2+225,room_height/2+150,-1,obj_level_advance);
 		saveGame();
 	}
 
