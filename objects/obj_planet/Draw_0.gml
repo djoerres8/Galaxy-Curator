@@ -14,7 +14,14 @@ for (var i = 0; i < glow_num; i++){
 draw_self();
 
 //ROTATE SHADOW
-image_angle = point_direction(obj_sun.x, obj_sun.y, x, y) + 60;
+//image_angle = point_direction(obj_sun.x, obj_sun.y, x, y) + 60;
+var shadow_angle = point_direction(obj_sun.x, obj_sun.y, x, y) + 60;
+switch(shape){
+	case "circle": draw_sprite_ext(spr_planet_circle_shadow, 0, x, y, image_xscale, image_yscale, shadow_angle, c_black, 1); break;
+	case "heart": draw_sprite_ext(spr_planet_heart_shadow, 0, x, y, image_xscale, image_yscale, shadow_angle, c_black, 1); break;
+	case "spiky": draw_sprite_ext(spr_planet_spiky_shadow, 0, x, y, image_xscale, image_yscale, shadow_angle, c_black, 1); break;
+}
+
 
 // draw if planet rules are passing or failing
 //draw_set_font(font_debug);

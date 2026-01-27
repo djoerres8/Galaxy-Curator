@@ -9,4 +9,5 @@ draw_sprite_ext(sprite_index, image_index, x, y, image_xscale * scale, image_ysc
 draw_self();
 
 //ROTATE SHADOW
-image_angle = point_direction(obj_sun.x, obj_sun.y, x, y) + 60;
+var shadow_angle = point_direction(obj_sun.x, obj_sun.y, x, y) + 60;
+draw_sprite_ext(spr_moon_shadow, 0, x, y, 1, 1, shadow_angle, c_black, 1);

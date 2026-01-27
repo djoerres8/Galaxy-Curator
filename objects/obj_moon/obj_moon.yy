@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_moon",
-    "path":"sprites/spr_moon/spr_moon.yy",
+    "name":"spr_moon_spin",
+    "path":"sprites/spr_moon_spin/spr_moon_spin.yy",
   },
   "spriteMaskId":null,
   "visible":true,
