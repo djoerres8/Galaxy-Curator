@@ -4,6 +4,9 @@ temperature = "any";
 size = "medium";
 shape = "circle";
 
+//MOONS
+moons = [];
+
 
 //STATE VARIABLS
 // held by player

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"createMoons",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"createMoons",
+  "parent":{
+    "name":"LevelCreation",
+    "path":"folders/Scripts/LevelCreation.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
