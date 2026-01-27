@@ -30,6 +30,11 @@ function levelValidation(){
 	}else{
 		obj_level_controller.level_complete = 1;
 		show_debug_message("Level Complete");
+		instance_create_layer(window_get_width()/2,window_get_height()/2,"Level_advance",obj_level_advance);
+		if (global.CURRENT_LEVEL <= global.progress){
+			global.progress = global.CURRENT_LEVEL+1;
+			saveGame();
+		}
 	}
 
 }
