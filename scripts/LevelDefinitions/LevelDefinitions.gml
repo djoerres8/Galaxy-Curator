@@ -1,11 +1,18 @@
 // this script holds all level data. 
 
+
+//moons temp
+//{ attribute_modifier: "temperature", value: "hotter/colder" , count: 2 },
+//{ attribute_modifier: "shape", value: "heart/spiky/round" , count: 2 },
+//{ attribute_modifier: "size", value: "bigger/smaller" , count: 2 },
+
 global.LEVELS = [];
 
 // Debug Level
 global.LEVELS[30] = {
     number_of_orbits: 0,
     planets: [],
+	moons: [],
 	rules: [],
 	tutorial : ""
 };
@@ -14,6 +21,7 @@ global.LEVELS[30] = {
 global.LEVELS[0] = {
     number_of_orbits: 1,
     planets: [],
+	moons: [],
 	rules: [],
 	tutorial : "Press the wierd purple button in the corner to go to the first level."
 };
@@ -24,6 +32,7 @@ global.LEVELS[1] = {
     planets: [
         { temperature: "any", shape: "circle", size: "medium" , count: 1 },
     ],
+	moons: [],
 	rules: [
 		
 	],
@@ -36,6 +45,7 @@ global.LEVELS[2] = {
     planets: [
         { temperature: "any", shape: "circle", size: "medium" , count: 3 },
     ],
+	moons: [],
 	rules: [
 		function (msg) { return forcePlanetsPerOrbit(1, msg); },
 		//function (msg) { return noPlanetsOnBench(msg); }
@@ -49,6 +59,7 @@ global.LEVELS[3] = {
     planets: [
         { temperature: "hot", shape: "circle", size: "medium" , count: 1 },
     ],
+	moons: [],
 	rules: [
 		
 	],
@@ -63,6 +74,7 @@ global.LEVELS[4] = {
 		{ temperature: "cold", shape: "circle", size: "medium" , count: 1 },
 		{ temperature: "temperate", shape: "circle", size: "medium" , count: 1 },
     ],
+	moons: [],
 	rules: [
 		function (msg) { return forcePlanetsPerOrbit(1, msg); },
 		//function (msg) { return noPlanetsOnBench(msg); }
@@ -78,6 +90,7 @@ global.LEVELS[5] = {
 		{ temperature: "cold", shape: "spiky", size: "medium" , count: 1 },
 		{ temperature: "temperate", shape: "spiky", size: "medium" , count: 2 },
     ],
+	moons: [],
 	rules: [
 	],
 	tutorial : "Spiky planets prefer to be alone on their orbit."
@@ -91,6 +104,7 @@ global.LEVELS[6] = {
 		{ temperature: "cold", shape: "spiky", size: "medium" , count: 1 },
 		{ temperature: "temperate", shape: "circle", size: "medium" , count: 2 },
     ],
+	moons: [],
 	rules: [
 	],
 	tutorial : "Heart planets must be with at least one other planet in the same orbit."
@@ -103,6 +117,15 @@ global.LEVELS[7] = {
         { temperature: "any", shape: "circle", size: "small" , count: 4 },
 		{ temperature: "any", shape: "circle", size: "large" , count: 2 },
     ],
+	moons: [
+		{ modifier: "hotter" , count: 1 },
+		{ modifier: "colder" , count: 1 },
+		{ modifier: "heart" , count: 1 },
+		{ modifier: "spiky" , count: 1 },
+		{ modifier: "round" , count: 1 },
+		{ modifier: "smaller" , count: 1 },
+		{ modifier: "bigger" , count: 1 },
+	],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(2, msg); },
 	],
@@ -117,6 +140,7 @@ global.LEVELS[8] = {
 		{ temperature: "temperate", shape: "spiky", size: "large" , count: 1 },
 		{ temperature: "cold", shape: "heart", size: "medium" , count: 2 },
     ],
+	moons: [],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(2, msg); },
 	],
@@ -133,6 +157,7 @@ global.LEVELS[9] = {
 		{ temperature: "hot", shape: "heart", size: "medium" , count: 4 },
 		{ temperature: "temperate", shape: "spiky", size: "large" , count: 1 },
     ],
+	moons: [],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(3, msg); },
 	],
@@ -149,6 +174,7 @@ global.LEVELS[20] = {
 		{ temperature: "any", shape: "heart", size: "medium" , count: 2 },
 		{ temperature: "temperate", shape: "circle", size: "medium" , count: 1 }
     ],
+	moons: [],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(3, msg); },
 		function (msg) { return noPlanetsOnBench(msg); }
