@@ -41,19 +41,19 @@ ripple_starting_alpha = .5;
 ripple_interval =  60*2.5;
 alarm[0] = ripple_interval; //random_range(4, 7);
 
+overlay = noone;
 
 //PLANET VISUAL
 function applyMoonVisuals() {
 	 
     // Shape → sprite
     switch (modifier) {
-        case "round":   sprite_index = spr_moon; break;
         case "spiky":   sprite_index = spr_moon_spiky;  break;
         case "heart":   sprite_index = spr_moon_heart;  break;
         case "hotter":  image_blend = c_red;    break;
         case "colder":  image_blend = c_blue;   break;
-        case "smaller":  break;
-        case "larger":   break;
+        case "smaller": overlay = spr_moon_minus; break;
+        case "larger":  overlay = spr_moon_plus; break;
     }
 	
 	radius = sprite_width / 2; // return radius of planet to use in calculating what orbit to snap to.

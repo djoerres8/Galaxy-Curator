@@ -126,7 +126,7 @@ global.LEVELS[7] = {
 		{ modifier: "spiky" , count: 1 },
 		{ modifier: "round" , count: 1 },
 		{ modifier: "smaller" , count: 1 },
-		{ modifier: "bigger" , count: 1 },
+		{ modifier: "larger" , count: 1 },
 	],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(2, msg); },
