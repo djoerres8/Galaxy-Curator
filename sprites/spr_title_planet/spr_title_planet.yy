@@ -13,12 +13,14 @@
   "For3D":false,
   "frames":[
     {"$GMSpriteFrame":"v1","%Name":"fb9a7006-90d0-4995-8097-12070cb7bea2","name":"fb9a7006-90d0-4995-8097-12070cb7bea2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e59b52a9-7630-466f-92c8-1bd5c640cd49","name":"e59b52a9-7630-466f-92c8-1bd5c640cd49","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":160,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"5e698d36-bfc8-4261-aa12-4dffc17be57f","blendMode":0,"displayName":"default (2)","isLocked":false,"name":"5e698d36-bfc8-4261-aa12-4dffc17be57f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"08007a52-ed52-478d-b5b7-740de00b3497","blendMode":0,"displayName":"default","isLocked":false,"name":"08007a52-ed52-478d-b5b7-740de00b3497","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_title_planet",
@@ -49,7 +51,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":1.0,
+    "length":2.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -71,6 +73,9 @@
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fb9a7006-90d0-4995-8097-12070cb7bea2","path":"sprites/spr_title_planet/spr_title_planet.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"397858f1-ad15-4a88-b952-c1598289a2db","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e59b52a9-7630-466f-92c8-1bd5c640cd49","path":"sprites/spr_title_planet/spr_title_planet.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"c9f6ce34-be12-45f9-b68b-fbce30f424d7","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
