@@ -9,7 +9,7 @@ max_level = 10;
 
 //generate levels up to max in rows of how many specified above
 //may need to redo to make more dynamic, right now uses sprite heights and pixel numbers to set distances
-for(i=0;i<global.progress;i++)
+for(i=0;i<=global.progress;i++)
 {
     if(rowBreak == sprites_in_row)
 	{
