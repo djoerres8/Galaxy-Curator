@@ -1,18 +1,15 @@
 
-// Bench positions for moons not in orbit. max 16 moons
+// Bench positions for moons not in orbit. max 15 moons
 global.MOON_BENCH_POSITIONS = [
-	{x:448, y:128}, {x:608, y:128},
-	{x:448, y:256}, {x:608, y:256},
-	{x:448, y:384}, {x:608, y:384},
-	{x:448, y:512}, {x:608, y:512},
-	{x:448, y:640}, {x:608, y:640},
-	{x:448, y:768}, {x:608, y:768},
-	{x:448, y:896}, {x:608, y:896},
-	{x:448, y:1024}, {x:608, y:1024}
+	{x:608, y:256}, { x:708, y: 256}, { x:808, y: 256},
+	{x:608, y:356}, { x:708, y: 356}, { x:808, y: 356},
+	{x:608, y:456}, { x:708, y: 456}, { x:808, y: 456},
+	{x:608, y:556}, { x:708, y: 556}, { x:808, y: 556},
+	{x:608, y:656}, { x:708, y: 656}, { x:808, y: 656}
 ];
 
 // this function is expecting an array of moons as defined in LEVELS, example:
-
+// { modifier: "hotter" , count: 3 }
 
 //given an array of moons, create the moon instances
 function createMoons(moons) {

@@ -1,14 +1,15 @@
 
-// Bench positions for planets not in orbit. max 16 planets
+// Bench positions for planets not in orbit. max 23.
 global.BENCH_POSITIONS = [
-	{x:128, y:128}, {x:288, y:128},
-	{x:128, y:256}, {x:288, y:256},
-	{x:128, y:384}, {x:288, y:384},
-	{x:128, y:512}, {x:288, y:512},
-	{x:128, y:640}, {x:288, y:640},
-	{x:128, y:768}, {x:288, y:768},
-	{x:128, y:896}, {x:288, y:896},
-	{x:128, y:1024}, {x:288, y:1024}
+	
+	{x:128, y:256}, {x:288, y:256}, {x:448, y:256},
+	{x:128, y:384}, {x:288, y:384}, {x:448, y:384},
+	{x:128, y:512}, {x:288, y:512}, {x:448, y:512},
+	{x:128, y:640}, {x:288, y:640}, {x:448, y:640},
+	{x:128, y:128}, {x:288, y:128}, {x:448, y:128}, {x:608, y:768}, {x:768, y:768},
+													{x:608, y:896}, {x:768, y:896},
+													{x:608, y:1024}, {x:768, y:1024},
+													{x:608, y:1152}, {x:768, y:1152},
 ];
 
 // this function is expecting an array of planets as defined in LEVELS, example:
