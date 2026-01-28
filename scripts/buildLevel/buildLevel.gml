@@ -16,7 +16,7 @@ function buildLevel(current_level){
 	createPlanets(levels[current_level].planets);
 	
 	//display level rules
-	createLevelRules(levels[current_level].rules);
+	createLevelMessaging(levels[current_level].rules, levels[current_level].tutorial);
 	
 	
 	

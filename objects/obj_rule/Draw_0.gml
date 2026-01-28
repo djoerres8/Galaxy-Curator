@@ -6,4 +6,4 @@ draw_set_font(font_rules);
 draw_set_color(c_black);
 draw_set_halign(fa_left);
 draw_set_valign(fa_center);
-draw_text_ext(80, y_placement+((sprite_height/2)), rule, -1, sprite_width-100);
+draw_text_ext(x+70, y+32, rule, -1, sprite_width-100);

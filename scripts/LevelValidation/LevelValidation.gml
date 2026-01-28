@@ -23,6 +23,10 @@ function levelValidation(){
 		}
 	}
 	
+	with (obj_rule){
+		image_index = global.LEVELS[global.CURRENT_LEVEL].rules[rule_index](0);	
+	}
+	
 	// set level completion and show fail msg
 	if (!valid){
 		showFailureMessage("fail...");

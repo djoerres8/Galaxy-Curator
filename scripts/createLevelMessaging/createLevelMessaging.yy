@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"createLevelRules",
+  "%Name":"createLevelMessaging",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"createLevelRules",
+  "name":"createLevelMessaging",
   "parent":{
     "name":"LevelCreation",
     "path":"folders/Scripts/LevelCreation.yy",
