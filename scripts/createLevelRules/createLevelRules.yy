@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"createLevelRules",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"createLevelRules",
+  "parent":{
+    "name":"LevelCreation",
+    "path":"folders/Scripts/LevelCreation.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

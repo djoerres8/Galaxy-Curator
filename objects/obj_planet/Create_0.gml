@@ -32,7 +32,7 @@ bench_y = 0;
 in_orbit = 0; // planet is in orbit
 orbit_index = -1; // which orbit in the level is being orbited. -1 if not in orbit
 orbit_angle = point_direction(obj_sun.x, obj_sun.y, x, y); // the angle from the planet to the sun
-orbit_speed = 0.5; // degrees per step
+orbit_speed = 0.25; // degrees per step
 orbit_radius = 0; // marks which orbit the planet is on
 radius = 0; // reset when applying visual update
 
@@ -59,7 +59,8 @@ alarm[0] = ripple_interval; //random_range(4, 7);
 //Planet Glow
 glow_num = 5;
 glow_scale = [1.05, 1.1, 1.15, 1.2, 1.25];
-glow_alpha = [.5, .4, .3, .2, .1];
+glow_alpha = [.25, .2, .15, .1, .05];
+planet_color = c_gray;
 
 //PLANET VISUAL
 function applyVisuals() {

@@ -32,6 +32,13 @@ function limitPlanetsPerOrbit(limit, msg){
 		}
 	}
 	
+	//also check to make sure all planets are in orbit
+	with (obj_planet) {
+		if (on_bench){
+			return 0;
+		}
+	}
+	
 	return 1;
 }
 
@@ -64,6 +71,13 @@ function forcePlanetsPerOrbit(limit, msg){
 		
 		// make sure the number of planets in the orbit is <= limit
 		if (num_planets_activley_in_orbit != limit){
+			return 0;
+		}
+	}
+	
+	//also check to make sure all planets are in orbit
+	with (obj_planet) {
+		if (on_bench){
 			return 0;
 		}
 	}

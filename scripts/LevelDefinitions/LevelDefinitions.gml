@@ -118,7 +118,7 @@ global.LEVELS[7] = {
     planets: [
         { temperature: "any", shape: "circle", size: "small" , count: 4 },
 		{ temperature: "any", shape: "circle", size: "large" , count: 2 },
-		{ temperature: "hot", shape: "spiky", size: "medium" , count: 1 },
+		{ temperature: "hot", shape: "circle", size: "medium" , count: 1 },
 		{ temperature: "cold", shape: "spiky", size: "medium" , count: 1 },
 		{ temperature: "temperate", shape: "spiky", size: "medium" , count: 1 },
     ],
@@ -133,6 +133,7 @@ global.LEVELS[7] = {
 	],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(2, msg); },
+		function (msg) { return noPlanetsOnBench(msg); }
 	],
 	tutorial : "Big planets take up 2 spaces in an orbit, while small planets take up 1/2 a space."
 };
@@ -180,6 +181,7 @@ global.LEVELS[10] = {
 		{ temperature: "any", shape: "circle", size: "large" , count: 1 },
 		{ temperature: "any", shape: "heart", size: "medium" , count: 1 },
     ],
+	moons: [],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(2, msg); },
 		function (msg) { return noPlanetsOnBench(msg); }
@@ -197,6 +199,7 @@ global.LEVELS[11] = {
 		{ temperature: "any", shape: "heart", size: "medium" , count: 2 },
 		{ temperature: "temperate", shape: "circle", size: "medium" , count: 1 }
     ],
+	moons: [],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(3, msg); },
 		function (msg) { return noPlanetsOnBench(msg); }
@@ -215,6 +218,7 @@ global.LEVELS[12] = {
 		{ temperature: "temperate", shape: "circle", size: "medium" , count: 1 },
 		{ temperature: "any", shape: "spiky", size: "large" , count: 1 },
     ],
+	moons: [],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(2, msg); },
 		function (msg) { return noPlanetsOnBench(msg); }
@@ -222,8 +226,8 @@ global.LEVELS[12] = {
 	tutorial : ""
 };
 
-// LEVEL 12
-global.LEVELS[12] = {
+// LEVEL 13
+global.LEVELS[13] = {
     number_of_orbits: 4,
     planets: [
         { temperature: "hot", shape: "circle", size: "medium" , count: 1 },
@@ -233,6 +237,7 @@ global.LEVELS[12] = {
 		{ temperature: "temperate", shape: "circle", size: "medium" , count: 1 },
 		{ temperature: "any", shape: "spiky", size: "small" , count: 1 },
     ],
+	moons: [],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(1, msg); },
 		function (msg) { return noPlanetsOnBench(msg); }
