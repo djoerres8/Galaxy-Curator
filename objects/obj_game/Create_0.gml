@@ -1,3 +1,4 @@
 global.pause = 0;
 
-window_set_size(room_width/2, room_height/2);
+//fix game size in window
+camera_set_view_size(view_camera[0], 1920, 1080);
