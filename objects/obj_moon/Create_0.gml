@@ -20,8 +20,8 @@ bench_y = 0;
 
 // variables to control planet when on planet
 on_planet = 0; // planet is in orbit
-planet_id = -1; // which planet instance in the level is being orbited. -1 if not in orbit
-orbit_angle = point_direction(planet_id.x, planet_id.y, x, y); // the angle from the planet to the sun
+planet_id = noone; // which planet instance in the level is being orbited. -1 if not in orbit
+orbit_angle = 0; // the angle from the moon to the planet //default set to nothing
 orbit_speed = 0.25; // degrees per step
 orbit_radius = 0;
 orbit_distance = 10; // how many pixels away should the moon orbit the planet

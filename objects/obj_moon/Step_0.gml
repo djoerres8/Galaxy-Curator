@@ -7,8 +7,10 @@
 if(mouse_check_button_pressed(mb_left) && instance_place(x, y, obj_hand) && !global.HOLDING_SOMTHING)
 {
 	//let planet take priority when grabbing
-	if (position_meeting(mouse_x, mouse_y, planet_id) && planet_id != -1){	
-		exit;
+	if (planet_id != noone){
+		if (position_meeting(mouse_x, mouse_y, planet_id)){	
+			exit;
+		}
 	}
 	//remove from planet
 	if (on_planet){
