@@ -1,6 +1,12 @@
 // This is the function that is ran every time the player places a planet on an orbit to check if the system is stable
 //returns true/false
 function levelValidation(){
+	show_debug_message("Validating123123123123123 ");
+	//fix edge case: this fixes accidentally clicking planets behind the next level screen
+	if (obj_level_controller.level_complete == 1){
+		show_debug_message("CAUGHT! HA nice try.");
+		return;	
+	}
 	
 	show_debug_message("Validating... ");
 	
@@ -32,6 +38,7 @@ function levelValidation(){
 		showFailureMessage("fail...");
 		obj_level_controller.level_complete = 0;
 	}else{
+		showFailureMessage("Success!!!");
 		obj_level_controller.level_complete = 1;
 		instance_create_layer(room_width/2,room_height/2,"Level_advance",obj_level_success);
 		instance_create_depth(room_width/2+150,room_height/2+150,-1,obj_level_advance);

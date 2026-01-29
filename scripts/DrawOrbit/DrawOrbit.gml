@@ -79,6 +79,6 @@ function drawOrbitCircle(orbit, thickness){
 		draw_set_font(font_rules);
 	    draw_set_halign(fa_center);
 	    draw_set_valign(fa_top);
-	    draw_text(obj_sun.x, obj_sun.y + orbit.radius + thickness + 4, string(array_length(orbit.planets))+"/"+string(orbit.limit));
+	    draw_text(obj_sun.x, obj_sun.y + orbit.radius + thickness + 4, string(orbit.num_planets)+"/"+string(orbit.limit));
 	}
 }

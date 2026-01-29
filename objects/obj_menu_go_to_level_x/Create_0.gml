@@ -1,4 +1,4 @@
 // Inherit the parent event and change text
 event_inherited();
-level = 12;
+level = 4;
 text = "Go to Level " + string(level);

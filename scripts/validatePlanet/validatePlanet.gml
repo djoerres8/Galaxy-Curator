@@ -72,3 +72,13 @@ function validatePlanet(planet){
 	}
 	
 }
+
+// given a planet return its size value
+function getPlanetSize(planet){
+	switch (planet.size){
+		case "large":  return 2;  
+		case "medium": return 1;  
+		case "small": return .5; 
+		default: return 1; 	
+	}	
+}

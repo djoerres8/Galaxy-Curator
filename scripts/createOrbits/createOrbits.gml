@@ -22,6 +22,7 @@ function createOrbits(num_orbits){
 			radius: orbit_radii[num_orbits][i],
 			temperature: getOrbitTemperature(num_orbits, i),
 			planets: [],
+			num_planets: 0,
 			limit: -1
 		}
 	}

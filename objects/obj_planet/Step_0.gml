@@ -8,9 +8,8 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 {
 	//remove from orbit
 	if (in_orbit){
-		array_delete(obj_level_controller.orbits[orbit_index].planets, array_get_index(obj_level_controller.orbits[orbit_index].planets, id), 1);
 		on_bench = 1;
-		levelValidation(); // validates all planets
+		removePlanetFromOrbit(self, orbit_index);
 	}
 	x = mouse_x;
 	y = mouse_y;
@@ -45,8 +44,7 @@ if (is_traveling)
 			orbit_angle = point_direction(obj_sun.x, obj_sun.y, x, y); // re-calculate angle to sun	
 			
 			// add planet to orbit for validation
-			array_push(obj_level_controller.orbits[orbit_index].planets, id);
-			levelValidation();
+			addPlanetToOrbit(self, orbit_index);
 		}
 		else if (destination == "bench")
 		{

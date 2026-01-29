@@ -107,6 +107,7 @@
     {"id":{"name":"levelRules","path":"scripts/levelRules/levelRules.yy",},},
     {"id":{"name":"levelValidation","path":"scripts/levelValidation/levelValidation.yy",},},
     {"id":{"name":"levelValidCheck","path":"scripts/levelValidCheck/levelValidCheck.yy",},},
+    {"id":{"name":"orbitManager","path":"scripts/orbitManager/orbitManager.yy",},},
     {"id":{"name":"saveData","path":"scripts/saveData/saveData.yy",},},
     {"id":{"name":"showFailureMessage","path":"scripts/showFailureMessage/showFailureMessage.yy",},},
     {"id":{"name":"transitionFade","path":"scripts/transitionFade/transitionFade.yy",},},
