@@ -17,6 +17,7 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 	is_held = 1;
 	on_bench = 0;
 	in_orbit = 0;
+	orbit_index = -1;
 	global.HOLDING_SOMTHING = 1;
 	//audio_play_sound(snd_planet_grabbed, 0, false); // sound effect
 }
@@ -25,13 +26,14 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 //have the planet move towards its destination. (an orbit or the bench)
 if (is_traveling)
 {
-
+			
 	var ang = point_direction(x, y, travel_destination.x, travel_destination.y);
 	x += lengthdir_x(travel_speed, ang);
 	y += lengthdir_y(travel_speed, ang);
 	
 	if (point_distance(x, y, travel_destination.x, travel_destination.y) <= travel_speed) 
 	{
+
         x = travel_destination.x;
         y = travel_destination.y;
         is_traveling = 0;
@@ -65,10 +67,26 @@ if (!is_held && !in_orbit && on_bench)
 //IN ORBIT
 if (in_orbit)
 {
+	var speed_boost = 0;
+	//check to make sure the planet in not overlapping another planet in orbit
+	var other_planet = instance_place(x, y, obj_planet);
+	if (other_planet != noone && other_planet.orbit_index == orbit_index){
+		if (orbit_angle < other_planet.orbit_angle){
+			if (orbit_angle == other_planet.orbit_angle) other_planet.orbit_angle += 5 // edge case
+			//freeze and wait for space to open
+			exit;	
+		}else{
+			speed_boost = 10;
+			
+		}
+	}
+	
+	
 	// have planets orbit the sun
-	orbit_angle += orbit_speed;
+	orbit_angle += orbit_speed + speed_boost;
 	x = obj_sun.x + lengthdir_x(orbit_radius, orbit_angle);
 	y = obj_sun.y + lengthdir_y(orbit_radius, orbit_angle);
+
 }
 
 

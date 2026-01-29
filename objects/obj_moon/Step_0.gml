@@ -17,6 +17,7 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 	is_held = 1;
 	on_bench = 0;
 	on_planet = 0;
+	planet_id = noone;
 	global.HOLDING_SOMTHING = 1;
 	//audio_play_sound(snd_planet_grabbed, 0, false); // sound effect
 }
@@ -25,8 +26,10 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 //have the planet move towards its destination. (an orbit or the bench)
 if (is_traveling)
 {
-
+	//angle pointing to the destination
 	var ang = point_direction(x, y, travel_destination.x, travel_destination.y);
+
+	//move towards the destination
 	x += lengthdir_x(travel_speed, ang);
 	y += lengthdir_y(travel_speed, ang);
 	
@@ -62,8 +65,21 @@ if (!is_held && !on_planet && on_bench)
 //IN ORBIT
 if (on_planet)
 {
+	var speed_boost = 0;
+	//check if moon is overlapping another moon on same planet, if so, let moon with higher ang move other freezes
+	var other_moon = instance_place(x, y, obj_moon);
+	if (other_moon != noone && other_moon.planet_id == planet_id){
+		if (orbit_angle < other_moon.orbit_angle){
+			if (orbit_angle == other_moon.orbit_angle) other_moon.orbit_angle += 5 // edge case
+			//freeze and wait for space to open
+			exit;	
+		}else{
+			speed_boost = 5;
+		}
+	}
+	
 	// have planets orbit the sun
-	orbit_angle += orbit_speed;
+	orbit_angle += orbit_speed + speed_boost;
 	x = planet_id.x + lengthdir_x(orbit_radius, orbit_angle);
 	y = planet_id.y + lengthdir_y(orbit_radius, orbit_angle);
 }

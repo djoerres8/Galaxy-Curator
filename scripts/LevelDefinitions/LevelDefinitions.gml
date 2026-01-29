@@ -83,7 +83,7 @@ global.LEVELS[4] = {
 		function (msg) { return forcePlanetsPerOrbit(1, msg); },
 		//function (msg) { return noPlanetsOnBench(msg); }
 	],
-	tutorial : "Other planets maye have differant preferences. Cold planets like being far away from the sun, while temperate planets like that sweet spot in the middle."
+	tutorial : "Other planets maye have differant preferences. Cold planets like being far away from the sun, while temperate planets like that sweet spot right in the middle."
 };
 
 // LEVEL 5
@@ -153,7 +153,7 @@ global.LEVELS[9] = {
     ],
 	moons: [{ modifier: "circle" , count: 1 },],
 	rules: [],
-	tutorial : "Hey, thats not a small planet, thats a MOON! Moons orbit planets and can change their preferences. This Rounding moon will make a planet act like a normal round planet."
+	tutorial : "Hey, thats not a small planet, thats a MOON! Moons orbit planets and can change their preferences. This Rounding moon will make a heart or spiky planet round instead."
 };
 
 // LEVEL 10
@@ -208,7 +208,7 @@ global.LEVELS[12] = {
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(2, msg); },
 	],
-	tutorial : "Planets can also have more than 1 moon! Some might even have up to 5! (suttle foreshadowing)"
+	tutorial : "Planets can also have more than 1 moon! Some might even have up to 5! (subtle foreshadowing)"
 };
 
 // LEVEL 13
