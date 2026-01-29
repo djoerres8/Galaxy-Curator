@@ -10,6 +10,12 @@ function validatePlanet(planet){
 	
 	var orbits = obj_level_controller.orbits; // all information about planerts on each orbit of the level lives in here
 	
+	//catch edge cases
+	if (planet.orbit_index == -1){
+		planet.is_passing = 0;
+		return;	
+	}
+	
 	//TEMPERATURE
 	if (orbits[planet.orbit_index].temperature != planet.temperature && planet.temperature != "any"){
 		temperature_passing = 0;

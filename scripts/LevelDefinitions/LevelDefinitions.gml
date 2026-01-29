@@ -203,7 +203,7 @@ global.LEVELS[12] = {
 	moons: [
 		{ modifier: "colder" , count: 1 },
 		{ modifier: "circle" , count: 1 },
-		{ modifier: "smaller" , count: 1 },
+		{ modifier: "smaller" , count: 2 },
 	],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(2, msg); },

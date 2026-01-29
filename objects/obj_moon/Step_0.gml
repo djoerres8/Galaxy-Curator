@@ -10,7 +10,7 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 	if (on_planet){
 		planet_id.removeMoon(self);
 		on_bench = 1;
-		levelValidation(); // validates all planets
+		levelValidation(); // validate
 	}
 	x = mouse_x;
 	y = mouse_y;
@@ -77,6 +77,9 @@ if (on_planet)
 			speed_boost = 5;
 		}
 	}
+	
+	//reset orbit radius to account for changing planet sizes because of moons
+	orbit_radius = planet_id.radius + radius + orbit_distance;
 	
 	// have planets orbit the sun
 	orbit_angle += orbit_speed + speed_boost;

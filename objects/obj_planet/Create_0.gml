@@ -132,6 +132,8 @@ function addMoon(moon){
 			break;
 	}
 	
+	applyVisuals();
+	
 }
 
 function removeMoon(moon){
@@ -176,6 +178,7 @@ function removeMoon(moon){
 			} 
 			break;
 	}
+	applyVisuals();
 }
 
 function checkMoonCompatable(moon){
