@@ -100,6 +100,9 @@ function addMoon(moon){
 	// add moon to planet's moons
 	array_push(moons, moon.id);
 	
+	//keep track of size change if planet changes size
+	var size_change = 0;
+	
 	switch(moon.modifier){
 		case "spiky":   shape = "spiky";  break;
 		case "heart": shape = "heart"; break;
@@ -120,19 +123,24 @@ function addMoon(moon){
 			break;
 		case "smaller": 
 			switch(size){
-				case "medium": size = "small" break;
-				case "large": size = "medium" break;
+				case "medium": size = "small"; size_change = -.5; break;
+				case "large": size = "medium"; size_change = -1; break;
 			} 
 			break;
 		case "larger":  
 			switch(size){
-				case "small": size = "medium" break;
-				case "medium": size = "large" break;
+				case "small": size = "medium"; size_change = .5; break;
+				case "medium": size = "large"; size_change = 1; break;
 			} 
 			break;
 	}
 	
 	applyVisuals();
+	
+	//adjust Orbit num_plants if sizing moon is added while planet is in orbit
+	if(in_orbit){
+		obj_level_controller.orbits[orbit_index].num_planets += size_change;
+	}
 	
 }
 
@@ -140,6 +148,9 @@ function removeMoon(moon){
 	
 	//remove moon from planet's moons
 	array_delete(moons, array_get_index(moons, moon.id), 1);
+	
+	//keep track of size change if planet changes size
+	var size_change = 0;
 	
 	switch(moon.modifier){
 		case "spiky": shape = og_shape;  break;
@@ -167,18 +178,23 @@ function removeMoon(moon){
 			break;
 		case "smaller": 
 			switch(size){
-				case "small": size = "medium" break;
-				case "medium": size = "large" break;
+				case "small": size = "medium"; size_change = .5; break;
+				case "medium": size = "large"; size_change = 1; break;
 			} 
 			break;
 		case "larger":  
 			switch(size){
-				case "medium": size = "small" break;
-				case "large": size = "medium" break;
+				case "medium": size = "small"; size_change = -.5; break;
+				case "large": size = "medium"; size_change = -1; break;
 			} 
 			break;
 	}
 	applyVisuals();
+	
+	//adjust Orbit num_plants if sizing moon is added while planet is in orbit
+	if(in_orbit){
+		obj_level_controller.orbits[orbit_index].num_planets += size_change;
+	}
 }
 
 function checkMoonCompatable(moon){
