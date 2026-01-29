@@ -2,10 +2,19 @@
 ripple_timer++;
 var t = ripple_timer / ripple_duration; // 0 → 1
 var scale = lerp(1, 1.6, t); // for sprite ripple
+switch(size){
+	case "large": scale = lerp(1, 1.4, t); break;
+	case "small": scale = lerp(1, 2, t); break
+	default: break;
+}
 var alpha  = lerp(ripple_starting_alpha, 0, t);
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale * scale, image_yscale * scale, image_angle, c_white, alpha); //sprite ripple
 
 //PLANET GLOW
+switch(size){
+	case "large": glow_scale = [1.025, 1.05, 1.075, 1.1, 1.15]; break;
+	default: glow_scale = [1.05, 1.1, 1.15, 1.2, 1.25];
+}
 for (var i = 0; i < glow_num; i++){
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale * glow_scale[i], image_yscale * glow_scale[i], image_angle, merge_color(planet_color, c_white, 0.5), glow_alpha[i]); //sprite ripple
 }

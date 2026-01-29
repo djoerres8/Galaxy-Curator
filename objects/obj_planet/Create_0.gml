@@ -52,7 +52,7 @@ bob_distance = random_range(.18, .22);
 //Ripple effect
 ripple_timer = 0;
 ripple_duration = 60; //random_range(60, 150);
-ripple_starting_alpha = .5;
+ripple_starting_alpha = .4;
 ripple_interval =  60*2.5;
 alarm[0] = ripple_interval; //random_range(4, 7);
 
