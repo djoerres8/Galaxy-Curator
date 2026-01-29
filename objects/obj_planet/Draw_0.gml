@@ -34,27 +34,31 @@ switch(shape){
 var pupil_x = mouse_x - x;
 var pupil_y = mouse_y - y;
 var pupil_depth = 100;  //depth between eye and mouse
-var radius_of_eye = 4; //control area of pupil
+var radius_of_eye = 4*image_xscale; //control area of pupil
 var eye_rad = radius_of_eye / sqrt( pupil_x * pupil_x + pupil_y * pupil_y + pupil_depth * pupil_depth );
-var left_eye_x = x-10; //x coordinate for left eye
-var right_eye_x = x+10; //x coordinate for right eye
-var eye_height = y-20; //height for eyes
+var left_eye_x = x-(10*image_xscale); //x coordinate for left eye
+var right_eye_x = x+(10*image_xscale); //x coordinate for right eye
+var eye_height = y-(20*image_yscale); //height for eyes
 
 //draw eye for each planet
 //left eye
-draw_sprite(spr_eye,0,left_eye_x,eye_height);
-draw_sprite(spr_pupil,0,left_eye_x+pupil_x*eye_rad,eye_height+pupil_y*eye_rad);
+draw_sprite_ext(spr_eye,0,left_eye_x,eye_height, image_xscale, image_yscale, 0, c_white, 1);
+draw_sprite_ext(spr_pupil,0,left_eye_x+pupil_x*eye_rad,eye_height+pupil_y*eye_rad, image_xscale, image_yscale, 0, c_white, 1);
 //right_eye
-draw_sprite(spr_eye,0,right_eye_x,eye_height);
-draw_sprite(spr_pupil,0,right_eye_x+pupil_x*eye_rad,eye_height+pupil_y*eye_rad);
+draw_sprite_ext(spr_eye,0,right_eye_x,eye_height, image_xscale, image_yscale, 0, c_white, 1);
+draw_sprite_ext(spr_pupil,0,right_eye_x+pupil_x*eye_rad,eye_height+pupil_y*eye_rad, image_xscale, image_yscale, 0, c_white, 1);
 
 //draw expressions
-if (is_held || on_bench){
-	draw_sprite(spr_neutral,0,x,y)
+if (obj_level_controller.level_complete){
+	draw_sprite_ext(spr_super_happy, 0, x, y, image_xscale, image_yscale, 0, c_white, 1);
+}else if (on_bench){
+	draw_sprite_ext(spr_neutral, 0, x, y, image_xscale, image_yscale, 0, c_white, 1);
+}else if (is_held){
+	draw_sprite_ext(spr_held, 0, x, y, image_xscale, image_yscale, 0, c_white, 1);
 }else{
 	if (is_passing){
-		draw_sprite(spr_smile,0,x,y)
+		draw_sprite_ext(spr_smile, 0, x, y, image_xscale, image_yscale, 0, c_white, 1);
 		}else{
-		draw_sprite(spr_frown,0,x,y)
+		draw_sprite_ext(spr_frown, 0, x, y, image_xscale, image_yscale, 0, c_white, 1);
 	}
 }

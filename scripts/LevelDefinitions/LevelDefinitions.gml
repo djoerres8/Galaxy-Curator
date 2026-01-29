@@ -74,13 +74,13 @@ global.LEVELS[3] = {
 global.LEVELS[4] = {
     number_of_orbits: 3,
     planets: [
-        { temperature: "hot", shape: "circle", size: "large" , count: 1 },
-		{ temperature: "cold", shape: "circle", size: "large" , count: 1 },
-		{ temperature: "temperate", shape: "circle", size: "large" , count: 1 },
+        { temperature: "hot", shape: "circle", size: "medium" , count: 1 },
+		{ temperature: "cold", shape: "circle", size: "medium" , count: 1 },
+		{ temperature: "temperate", shape: "circle", size: "medium" , count: 1 },
     ],
 	moons: [],
 	rules: [
-		function (msg) { return forcePlanetsPerOrbit(2, msg); },
+		function (msg) { return forcePlanetsPerOrbit(1, msg); },
 		//function (msg) { return noPlanetsOnBench(msg); }
 	],
 	tutorial : "Other planets may have different preferences. Cold planets like being far away from the sun, while temperate planets like that sweet spot right in the middle."
@@ -216,7 +216,7 @@ global.LEVELS[13] = {
     number_of_orbits: 4,
     planets: [
         { temperature: "hot", shape: "circle", size: "medium" , count: 1 },
-		{ temperature: "hot", shape: "spiky", size: "medium" , count: 1 },
+		{ temperature: "hot", shape: "spiky", size: "large" , count: 1 },
 		{ temperature: "cold", shape: "circle", size: "small" , count: 1 },
 		{ temperature: "any", shape: "heart", size: "small" , count: 1 },
 		{ temperature: "temperate", shape: "circle", size: "medium" , count: 1 },

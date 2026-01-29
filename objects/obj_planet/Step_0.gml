@@ -4,7 +4,7 @@
 //check if cursor is over the planet and if lmb is pressed set x/y and is_held to true. 
 //Dragging is handled at end of step
 //global.HOLDING_SOMTHING makes sure only 1 thing can be held at a time
-if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id) && !global.HOLDING_SOMTHING)
+if(mouse_check_button_pressed(mb_left) && instance_place(x, y, obj_hand) && !global.HOLDING_SOMTHING)
 {
 	//remove from orbit
 	if (in_orbit){
