@@ -71,3 +71,22 @@ if (obj_level_controller.level_complete){
 		draw_sprite_ext(spr_frown, 0, x, y, image_xscale, image_yscale, 0, c_white, 1);
 	}
 }
+
+//HOVER CHECK -- visual indicator of what player will grab
+if(instance_place(x, y, obj_hand) && (!global.HOLDING_SOMTHING || (obj_hand.moon_held && checkMoonCompatable(obj_hand.moon_held))))
+{
+	var draw = 1;
+	for (var i = 0; i < array_length(moons); i++){
+		if (instance_place(moons[i].x, moons[i].y, obj_hand) && !position_meeting(mouse_x, mouse_y, self)){
+			draw = 0;
+			show_debug_message("RAHHHHHHH");
+		}
+	}
+
+	if (draw && obj_hand.planet_on_top == id){
+		draw_set_alpha(.33);
+		draw_set_color(c_yellow);
+		draw_circle(x, y, radius+5, 0);
+		draw_set_alpha(1);
+	}
+}

@@ -4,7 +4,7 @@
 //check if cursor is over the moon and if lmb is pressed set x/y and is_held to true. 
 //Dragging is handled at end of step
 //global.HOLDING_SOMTHING makes sure only 1 thing can be held at a time
-if(mouse_check_button_pressed(mb_left) && instance_place(x, y, obj_hand) && !global.HOLDING_SOMTHING)
+if(mouse_check_button_pressed(mb_left) && instance_place(x, y, obj_hand) && !global.HOLDING_SOMTHING && obj_hand.moon_on_top == id)
 {
 	//let planet take priority when grabbing
 	if (planet_id != noone){
@@ -25,6 +25,7 @@ if(mouse_check_button_pressed(mb_left) && instance_place(x, y, obj_hand) && !glo
 	on_planet = 0;
 	planet_id = noone;
 	global.HOLDING_SOMTHING = 1;
+	obj_hand.moon_held = id;
 	//audio_play_sound(snd_planet_grabbed, 0, false); // sound effect
 }
 

@@ -17,5 +17,8 @@ else
 	sprite_index = spr_hand_open;
 }
 
+planet_on_top = instance_place(x, y, obj_planet);
+moon_on_top = instance_place(x, y, obj_moon);
+
 
 
