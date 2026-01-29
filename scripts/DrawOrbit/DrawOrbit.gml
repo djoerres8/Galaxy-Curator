@@ -73,4 +73,12 @@ function drawOrbitCircle(orbit, thickness){
 	    // Draw successive 1-pixel wide circles, increasing the radius each time
 	    draw_circle(obj_sun.x, obj_sun.y, orbit.radius + i, true); 
 	}
+	
+	if (orbit.limit != -1){
+		//draw how many planets in the orbit at base of orbit
+		draw_set_font(font_rules);
+	    draw_set_halign(fa_center);
+	    draw_set_valign(fa_top);
+	    draw_text(obj_sun.x, obj_sun.y + orbit.radius + thickness + 4, string(array_length(orbit.planets))+"/"+string(orbit.limit));
+	}
 }

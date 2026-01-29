@@ -83,7 +83,7 @@ global.LEVELS[4] = {
 		function (msg) { return forcePlanetsPerOrbit(1, msg); },
 		//function (msg) { return noPlanetsOnBench(msg); }
 	],
-	tutorial : "Other planets maye have differant preferences. Cold planets like being far away from the sun, while temperate planets like that sweet spot right in the middle."
+	tutorial : "Other planets may have different preferences. Cold planets like being far away from the sun, while temperate planets like that sweet spot right in the middle."
 };
 
 // LEVEL 5
@@ -203,7 +203,7 @@ global.LEVELS[12] = {
 	moons: [
 		{ modifier: "colder" , count: 1 },
 		{ modifier: "circle" , count: 1 },
-		{ modifier: "smaller" , count: 2 },
+		{ modifier: "smaller" , count: 1 },
 	],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(2, msg); },
