@@ -253,7 +253,9 @@ global.LEVELS[14] = {
 		],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(2, msg); },
-		function (msg) { return noPlanetsOnBench(msg); }
+	],
+	tutorial : ""
+};
     
 // LEVEL 15
 global.LEVELS[15] = {
@@ -273,7 +275,6 @@ global.LEVELS[15] = {
 		],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(1, msg); },
-		function (msg) { return noPlanetsOnBench(msg); }
 	],
 	tutorial : ""
 };
@@ -291,21 +292,17 @@ global.LEVELS[16] = {
 		{ temperature: "temperate", shape: "spiky", size: "medium" , count: 1 }
     ],
 	moons: [
-		{ modifier: "smaller" , count: 4 },
-		{ modifier: "larger" , count: 3 },
+		{ modifier: "smaller" , count: 3 },
+		{ modifier: "larger" , count: 2 },
 		{ modifier: "heart" , count: 2 },
-		{ modifier: "colder" , count: 3 },
+		{ modifier: "colder" , count: 2 },
 		{ modifier: "circle" , count: 2 },
 		{ modifier: "hotter" , count: 2 },
+		{ modifier: "spiky" , count: 1 },
 		],
 	rules: [
 		function (msg) { return forcePlanetsPerOrbit(2, msg); },
-		function (msg) { return forceMoonsPerPlanet(2, msg); }
-	],
-	tutorial : ""
-};
-		function (msg) { return limitPlanetsPerOrbit(3, msg); },
-		function (msg) { return allPlanetsPassing(msg); },
+		function (msg) { return forceMinimumMoonsPerPlanet(2, msg); }
 	],
 	tutorial : ""
 };
