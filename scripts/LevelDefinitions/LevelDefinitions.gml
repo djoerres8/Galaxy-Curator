@@ -310,6 +310,37 @@ global.LEVELS[22] = {
 	tutorial : "Look at all those tiny planets! this must be a small-or system."
 };
 
+
+// LEVEL 23
+global.LEVELS[23] = {
+    number_of_orbits: 6,
+    planets: [ 
+        { temperature: "cold", shape: "spiky", size: "medium" , count: 1 },
+		{ temperature: "cold", shape: "heart", size: "medium" , count: 1 },
+		{ temperature: "cold", shape: "circle", size: "medium" , count: 1 },
+		
+		{ temperature: "hot", shape: "spiky", size: "medium" , count: 2 },
+		{ temperature: "hot", shape: "heart", size: "medium" , count: 1 },
+		{ temperature: "hot", shape: "circle", size: "medium" , count: 1 },
+		
+		{ temperature: "temperate", shape: "spiky", size: "medium" , count: 1 },
+		{ temperature: "temperate", shape: "heart", size: "medium" , count: 1 },
+		{ temperature: "temperate", shape: "circle", size: "medium" , count: 1 },
+		
+		{ temperature: "any", shape: "circle", size: "medium" , count: 2 },
+		{ temperature: "any", shape: "heart", size: "medium" , count: 2 },
+		{ temperature: "any", shape: "circle", size: "medium" , count: 1 },
+    ],
+	moons: [ 
+		{ modifier: "hotter" , count: 2 },
+		{ modifier: "colder" , count: 2 },
+	],
+	rules: [
+		function (msg) { return allPlanetsPassing(msg); },
+	],
+	tutorial : ""
+};
+
 // LEVEL X
 var sample_all = {
     number_of_orbits: 2,

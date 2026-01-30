@@ -89,7 +89,7 @@ function drawOrbitCircle(orbit, thickness){
 function drawOrbitHighlight(){
 
 	//player is holding a planet
-	if(obj_hand.moon_held == noone && global.HOLDING_SOMTHING)
+	if(obj_hand.planet_held != noone && global.HOLDING_SOMTHING)
 	{
 	
 		var planet = obj_hand.planet_held;
