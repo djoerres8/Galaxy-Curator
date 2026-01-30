@@ -20,7 +20,7 @@ for(i=0;i<=global.progress;i++)
     }
 	ins = instance_create_depth(xx,yy,0,obj_level_select_button);
     //ins = instance_create_depth(xx,yy,0,obj_level_select_button);
-    ins.level_select_option = i; 
+    ins.level_select_option = i+1; 
     //xx += obj_level_select_button.sprite_width*1.2;
 	xx += space_between;
     rowBreak++;

@@ -10,7 +10,7 @@ var next_level = global.CURRENT_LEVEL+1;
 if (next_level > max_level)
 {
 	next_room = rm_main_menu;
-	global.CURRENT_LEVEL = 0;
+	global.CURRENT_LEVEL = 1;
 	//gives mouse back to player
 	window_set_cursor(cr_default);
 }
