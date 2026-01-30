@@ -169,17 +169,18 @@ global.LEVELS[10] = {
 
 // LEVEL 11 TODO: fix this tutorial level
 global.LEVELS[11] = {
-    number_of_orbits: 2,
+    number_of_orbits: 3,
     planets: [
-		{ temperature: "any", shape: "circle", size: "small" , count: 2 },
+		{ temperature: "any", shape: "circle", size: "small" , count: 1 },
 		{ temperature: "any", shape: "circle", size: "large" , count: 2 },
+		{ temperature: "any", shape: "circle", size: "medium" , count: 2 },
     ],
 	moons: [
 		{ modifier: "larger" , count: 1 },
 		{ modifier: "smaller" , count: 1 },
 	],
 	rules: [
-		function (msg) { return limitPlanetsPerOrbit(3, msg); },
+		function (msg) { return forcePlanetsPerOrbit(2,msg); },
 	],
 	tutorial : "Growing moons will increase the planets size, while shrinking moons will decrease it."
 };
@@ -204,20 +205,26 @@ global.LEVELS[12] = {
 
 // LEVEL 13
 global.LEVELS[13] = {
-    number_of_orbits: 4,
+    number_of_orbits: 3,
     planets: [
-        { temperature: "hot", shape: "circle", size: "medium" , count: 1 },
+		{ temperature: "cold", shape: "circle", size: "medium" , count: 1 },
+		{ temperature: "temperate", shape: "heart", size: "medium" , count: 1 },
+		{ temperature: "any", shape: "circle", size: "small" , count: 1 },
 		{ temperature: "hot", shape: "spiky", size: "large" , count: 1 },
-		{ temperature: "cold", shape: "circle", size: "small" , count: 1 },
-		{ temperature: "any", shape: "heart", size: "small" , count: 1 },
+		{ temperature: "cold", shape: "spiky", size: "small" , count: 1 },
 		{ temperature: "temperate", shape: "circle", size: "medium" , count: 1 },
     ],
-	moons: [],
-	rules: [
-		function (msg) { return limitPlanetsPerOrbit(1, msg); },
-		function (msg) { return noPlanetsOnBench(msg); }
+	moons: [
+		{ modifier: "colder" , count: 1 },
+		{ modifier: "smaller" , count: 2 },
+		{ modifier: "heart", count: 1 },
+		{ modifier: "circle", count: 1 },
+		
 	],
-	tutorial : "Thats all We've got so far. More levels coming soon... probably. Also the game might break.. idk."
+	rules: [
+		function (msg) { return forcePlanetsPerOrbit(1.5, msg); },
+	],
+	tutorial : "Planets can also have more than 1 moon! Some might even have up to 5! (subtle foreshadowing)"
 };
 
 // LEVEL 14
