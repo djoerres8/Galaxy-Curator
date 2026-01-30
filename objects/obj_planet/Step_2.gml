@@ -9,6 +9,7 @@ if(is_held && mouse_check_button_released(mb_left))
 {
     is_held = 0;
 	global.HOLDING_SOMTHING = 0;
+	obj_hand.planet_held = noone;
 	
 	//check for distance from sun	
 	var distance_from_sun = point_distance(mouse_x, mouse_y, obj_sun.x, obj_sun.y);

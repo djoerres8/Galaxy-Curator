@@ -1,6 +1,11 @@
 
 //draw the orbits
 layer = layer_get_id("Orbits"); //set layer so orbits appear below planets
+
+//if hand is holding a planet and is within range of orbit, draw a highlight
+drawOrbitHighlight();
+
+//draw the orbits
 for (var i = 0; i < array_length(orbits); i += 1)
 {
 	//drawOrbitEllipse(orbits[i], 5, i);
