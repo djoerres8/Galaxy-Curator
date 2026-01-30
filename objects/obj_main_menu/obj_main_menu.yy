@@ -1,17 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_menu_new_game_1",
+  "%Name":"obj_main_menu",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_menu_new_game_1",
+  "name":"obj_main_menu",
   "overriddenProperties":[],
   "parent":{
-    "name":"Main_Menu",
-    "path":"folders/Objects/Menu_Buttons/Main_Menu.yy",
+    "name":"In Level Buttons",
+    "path":"folders/Objects/In Level Buttons.yy",
   },
   "parentObjectId":{
     "name":"obj_menu_button",

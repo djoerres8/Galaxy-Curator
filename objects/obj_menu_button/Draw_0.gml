@@ -2,6 +2,10 @@
 
 draw_set_font(font_menu_2);
 
+if (room == rm_level){
+	draw_set_font(font_level_buttons);
+}
+
 draw_self();
 
 //set color on whether image is 0 or 3 (unselected) or else (selected)

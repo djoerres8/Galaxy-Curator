@@ -3,15 +3,14 @@
   "%Name":"obj_level_reset",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_level_reset",
   "overriddenProperties":[],
   "parent":{
-    "name":"Menu_Buttons",
-    "path":"folders/Objects/Menu_Buttons.yy",
+    "name":"In Level Buttons",
+    "path":"folders/Objects/In Level Buttons.yy",
   },
   "parentObjectId":{
     "name":"obj_menu_button",
