@@ -13,16 +13,7 @@ moons:
 
 global.LEVELS = [];
 
-// Debug Level
-global.LEVELS[30] = {
-    number_of_orbits: 0,
-    planets: [],
-	moons: [],
-	rules: [],
-	tutorial : ""
-};
-
-// LEVEL 0
+// LEVEL 0 (debug level)
 global.LEVELS[0] = {
     number_of_orbits: 1,
     planets: [
@@ -229,8 +220,8 @@ global.LEVELS[13] = {
 	tutorial : "Thats all We've got so far. More levels coming soon... probably. Also the game might break.. idk."
 };
 
-// LEVEL 20
-global.LEVELS[20] = {
+// LEVEL 14
+global.LEVELS[14] = {
     number_of_orbits: 3,
     planets: [
         { temperature: "hot", shape: "circle", size: "medium" , count: 1 },
