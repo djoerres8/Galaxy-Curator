@@ -1,7 +1,7 @@
 //Load level from save
 
 //TO CHANGE, just a placeholder that takes you to the next room and level 0;
-var next_room = rm_level_1;
+var next_room = rm_level;
 var next_level = global.progress;
 
 max_level = array_length(global.LEVELS);
