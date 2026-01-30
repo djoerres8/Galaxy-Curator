@@ -2,7 +2,7 @@
 
 //TO CHANGE, just a placeholder that takes you to the next room and level 0;
 var next_room = rm_level;
-var next_level = global.progress;
+var next_level = global.HIGHEST_LEVEL_COMPLETED;
 
 max_level = array_length(global.LEVELS);
 //if hit max level, go to last level

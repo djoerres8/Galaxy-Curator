@@ -1,3 +1,3 @@
 //make save data array
-global.progress = 0;
+global.HIGHEST_LEVEL_COMPLETED = 0;
 loadGame();

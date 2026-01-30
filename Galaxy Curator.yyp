@@ -139,6 +139,7 @@
     {"id":{"name":"spr_level_success","path":"sprites/spr_level_success/spr_level_success.yy",},},
     {"id":{"name":"spr_level_tutorial_box","path":"sprites/spr_level_tutorial_box/spr_level_tutorial_box.yy",},},
     {"id":{"name":"spr_menu_button","path":"sprites/spr_menu_button/spr_menu_button.yy",},},
+    {"id":{"name":"spr_mini_system","path":"sprites/spr_mini_system/spr_mini_system.yy",},},
     {"id":{"name":"spr_moon_heart","path":"sprites/spr_moon_heart/spr_moon_heart.yy",},},
     {"id":{"name":"spr_moon_minus","path":"sprites/spr_moon_minus/spr_moon_minus.yy",},},
     {"id":{"name":"spr_moon_plus","path":"sprites/spr_moon_plus/spr_moon_plus.yy",},},
