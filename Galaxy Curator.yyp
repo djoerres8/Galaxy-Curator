@@ -145,6 +145,7 @@
     {"id":{"name":"spr_planet_heart","path":"sprites/spr_planet_heart/spr_planet_heart.yy",},},
     {"id":{"name":"spr_planet_spiky_shadow","path":"sprites/spr_planet_spiky_shadow/spr_planet_spiky_shadow.yy",},},
     {"id":{"name":"spr_planet_spiky","path":"sprites/spr_planet_spiky/spr_planet_spiky.yy",},},
+    {"id":{"name":"spr_planet_spin","path":"sprites/spr_planet_spin/spr_planet_spin.yy",},},
     {"id":{"name":"spr_pupil","path":"sprites/spr_pupil/spr_pupil.yy",},},
     {"id":{"name":"spr_smile","path":"sprites/spr_smile/spr_smile.yy",},},
     {"id":{"name":"spr_sound_off","path":"sprites/spr_sound_off/spr_sound_off.yy",},},
