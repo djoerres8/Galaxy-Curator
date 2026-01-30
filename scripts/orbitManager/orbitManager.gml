@@ -12,6 +12,8 @@ function addPlanetToOrbit(planet, orbit_index){
 	//remove value of planet from total on orbit
 	orbit.num_planets += getPlanetSize(planet);
 	
+	audio_play_sound(snd_pop_in,0,false);
+	
 	levelValidation(); // validates all planets
 }
 

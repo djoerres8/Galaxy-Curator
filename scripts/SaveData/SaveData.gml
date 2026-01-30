@@ -5,7 +5,7 @@ function saveGame(){
 			global.progress = global.CURRENT_LEVEL+1;
 	}
 	//create a save file
-	var save_file = "savedata.sav";
+	var save_file = "savedata.txt";
 	//store level progress in json format
 	var json = json_stringify(global.progress);
 	//allocate memory for saving
@@ -22,7 +22,7 @@ function saveGame(){
 function loadGame(){
 	
 	//find save file
-	var save_file = "savedata.sav";
+	var save_file = "savedata.txt";
 	//If no save data, exit function
 	if !file_exists(save_file) exit;
 	

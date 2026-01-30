@@ -18,7 +18,7 @@ if(mouse_check_button_pressed(mb_left) && instance_place(x, y, obj_hand) && !glo
 	in_orbit = 0;
 	orbit_index = -1;
 	global.HOLDING_SOMTHING = 1;
-	//audio_play_sound(snd_planet_grabbed, 0, false); // sound effect
+	audio_play_sound(snd_planet_grab, 0, false); // sound effect
 }
 
 //TRAVELING TO DESTINATION
