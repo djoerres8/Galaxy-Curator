@@ -9,7 +9,7 @@ if(is_held && mouse_check_button_released(mb_left))
 {
     is_held = 0;
 	global.HOLDING_SOMTHING = 0;
-	obj_hand.moon_held = id;
+	obj_hand.moon_held = noone;
 	
 	// check if moon is overlapping any planet
     var planet = instance_place(x, y, obj_planet);

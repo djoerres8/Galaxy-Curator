@@ -15,8 +15,10 @@ function createLevelMessaging(rules, tutorial){
 
 	}
 	
-	//also create level tutorial messgae
-	var new_tutorial = instance_create_layer(room_width/2, sprite_get_height(spr_level_tutorial_box)*-1, "Instances", obj_tutorial);
-	new_tutorial.tutorial = tutorial;
+	//also create level tutorial messgae if exists
+	if (tutorial != ""){
+		var new_tutorial = instance_create_layer(room_width/2, sprite_get_height(spr_level_tutorial_box)*-1, "Instances", obj_tutorial);
+		new_tutorial.tutorial = tutorial;
+	}
 
 }

@@ -79,19 +79,24 @@ function forcePlanetsPerOrbit(limit, msg){
 }
 
 //no planets can be on bench
-function noPlanetsOnBench(msg){
+function allPlanetsPassing(msg){
 	
-	if (msg){
-		return "All Planets must be in an orbit.";
-	}
+	var total_planets = instance_number(obj_planet);
+	var num_passing = 0;
 	
 	with (obj_planet) {
-		if (on_bench){
-			return 0;
+		if (is_passing){
+			num_passing++;
 		}
 	}
 	
-	return 1;
+	var pass = (num_passing == total_planets);
+	
+	if (msg){
+		return "Planets with passing rules: "+ string(num_passing) + "/" + string(total_planets);
+	}
+	
+	return pass;
 }
 	
 function limitMoonsPerPlanet(limit, msg){
@@ -136,6 +141,27 @@ function forceMoonsPerPlanet(limit, msg){
 	return 1;
 }
 
+function forceMinimumMoonsPerPlanet(minimum, msg){
+	
+	if (msg){		
+		if (minimum == 1){
+			return "Every Planet must have at least " + string(minimum) + " moon.";
+		}else{
+			return "Every Planet must have at least " + string(minimum) + " moons.";
+		}
+	}
+	
+	//loop through every planet
+	with(obj_planet){
+		// make sure the number of moons on the planet is < minimum
+		if (array_length(moons) < minimum){
+			return 0;
+		}
+	}
+	
+	return 1;
+}
+
 function LimitUsableMoons(limit, msg){
 	
 	if (msg){		
@@ -154,26 +180,22 @@ function LimitUsableMoons(limit, msg){
 		number_of_moons_in_use += array_length(moons);
 	}
 	
-	if (number_of_moons_in_use >= limit){
+	if (number_of_moons_in_use > limit){
 		return 0;
 	}
 	
 	return 1;
 	
 }
-
-// ban planets from specified orbits. array indexed
-function banOrbit(orbit_index, msg){
 	
-	if (msg){		
-		switch (orbit_index){
+function banOrbit(orbit_index, msg){
+	switch (orbit_index){
 			case 0: return "No planets can be in the orbit closest to the sun.";
 			case 1: return "No planets can be in the 2nd Orbit.";
 			case 2: return "No planets can be in the 3rd Orbit.";
 			case 3: return "No planets can be in the 4th Orbit.";
 			case 4: return "No planets can be in the 5th Orbit.";
 			case 5: return "No planets can be in the outermost Orbit.";
-		}
 	}
 	
 	// make sure specified orbit has 0 planets
