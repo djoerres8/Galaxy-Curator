@@ -5,7 +5,9 @@ global.MOON_BENCH_POSITIONS = [
 	{x:608, y:356}, { x:708, y: 356}, { x:808, y: 356},
 	{x:608, y:456}, { x:708, y: 456}, { x:808, y: 456},
 	{x:608, y:556}, { x:708, y: 556}, { x:808, y: 556},
-	{x:608, y:656}, { x:708, y: 656}, { x:808, y: 656}
+	{x:608, y:656}, { x:708, y: 656}, { x:808, y: 656},
+	{x:608, y:756}, { x:708, y: 756}, { x:808, y: 756},
+	{x:608, y:856}, { x:708, y: 856}, { x:808, y: 856}
 ];
 
 // this function is expecting an array of moons as defined in LEVELS, example:

@@ -30,6 +30,8 @@ function levelValidation(){
 	
 	with (obj_rule){
 		image_index = global.LEVELS[global.CURRENT_LEVEL].rules[rule_index](0);	
+		//reset message in case of updates
+		rule = global.LEVELS[global.CURRENT_LEVEL].rules[rule_index](1);
 	}
 	
 	// set level completion and show fail msg

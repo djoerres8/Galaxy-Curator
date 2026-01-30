@@ -17,9 +17,5 @@ function buildLevel(current_level){
 	
 	//display level rules
 	createLevelMessaging(levels[current_level].rules, levels[current_level].tutorial);
-	
-	
-	
-
 }
 
