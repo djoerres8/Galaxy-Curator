@@ -113,25 +113,13 @@ function drawOrbitHighlight(){
 					closest_orbit =  i;
 				}
 			}
-		
-			//// draw a line from the planet to the sun, place the planet along that line but at the same distance away as the found orbit
-			//var ang = point_direction(obj_sun.x, obj_sun.y, x, y);	
-		
-			////set planet on its way to the destination
-			//is_traveling = 1;
-			//travel_destination = { x: obj_sun.x + lengthdir_x(obj_level_controller.orbits[closest_orbit].radius, ang), y: obj_sun.y + lengthdir_y(obj_level_controller.orbits[closest_orbit].radius, ang) };
-			//destination = "orbit";
-		
-			////set orbit_radius to know which orbit the planet is in.
-			//orbit_radius = obj_level_controller.orbits[closest_orbit].radius;
-			//orbit_index = closest_orbit;
 			
 			orbit_radius = obj_level_controller.orbits[closest_orbit].radius;
 			
 			//draw glow
 			for (var i = 0; i < 50; i++) {
-				draw_set_alpha(.1);
-				draw_set_colour(c_yellow); // Set the desired color
+				draw_set_alpha(lerp(0.03, 0.08, (sin(current_time * (2 * pi) / 90 / 16) + 1) * 0.5));
+				draw_set_colour(c_white); // Set the desired color
 				draw_circle(obj_sun.x, obj_sun.y, orbit_radius + i, true); 
 				draw_circle(obj_sun.x, obj_sun.y, orbit_radius + (-1*i), true); 
 				

@@ -14,6 +14,6 @@ twinkle_offset = random(1000);
 image_speed = 0;
 image_index = 0;
 
-blink_chance = 0.015; // ~1.5% chance per second
+blink_chance = 0.03; // ~3% chance per second
 blink_cooldown = irandom_range(60, 240); // delay before it can blink again
 blink_timer = blink_cooldown;
