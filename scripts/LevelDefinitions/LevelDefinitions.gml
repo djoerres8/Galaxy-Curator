@@ -307,6 +307,29 @@ global.LEVELS[16] = {
 	tutorial : ""
 };
 
+// LEVEL 20
+global.LEVELS[20] = {
+    number_of_orbits: 3,
+    planets: [
+        { temperature: "hot", shape: "circle", size: "small" , count: 1 },
+		{ temperature: "cold", shape: "spiky", size: "large" , count: 1 },
+		{ temperature: "cold", shape: "circle", size: "large" , count: 1 },
+		{ temperature: "cold", shape: "spiky", size: "large" , count: 1 },
+    ],
+	moons: [
+		{ modifier: "smaller" , count: 6 },
+		{ modifier: "larger" , count: 2 },
+		{ modifier: "heart" , count: 3 },
+		{ modifier: "colder" , count: 2 },
+		{ modifier: "hotter" , count: 6 },
+		{ modifier: "spiky" , count: 1 },
+		],
+	rules: [
+		function (msg) { return forceMinimumMoonsPerPlanet(5, msg); },
+		function (msg) { return allPlanetsPassing(msg); }
+	],
+	tutorial : "Oops all moons!"
+};
 //START OF DAVIDS LEVELS
 
 // LEVEL 21
