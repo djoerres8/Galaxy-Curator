@@ -368,11 +368,12 @@ global.LEVELS[19] = {
 		{ modifier: "heart" , count: 1 },
 		{ modifier: "smaller" , count: 2 },
 		{ modifier: "hotter" , count: 1 },
-		{ modifier: "circle" , count: 1 },
+		{ modifier: "circle" , count: 2 },
 		],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(2, msg); },
 		function (msg) { return banOrbit(1, msg); },
+		function (msg) { return banOrbit(3, msg); },
 		function (msg) { return allPlanetsPassing(msg); },
 	],
 	tutorial : "Some levels restrict the orbits you can use."
