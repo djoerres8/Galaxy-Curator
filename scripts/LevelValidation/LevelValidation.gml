@@ -23,7 +23,7 @@ function levelValidation(){
 	//Validate level rules
 	var level_rules = global.LEVELS[global.CURRENT_LEVEL].rules;
 	for (var i = 0; i < array_length(level_rules); i++){
-		if (!level_rules[i](false)){
+		if (!level_rules[i](0)){
 			valid = 0;	
 		}
 	}
