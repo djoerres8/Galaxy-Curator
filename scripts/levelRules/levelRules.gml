@@ -11,12 +11,8 @@ function limitPlanetsPerOrbit(limit, msg){
 		    orbits[i].limit = limit;
 		}
 		
-		if (limit == 1){
-			return "Every Orbit may have no more than " + string(limit) + " Planet in them.";
-		}else{
-			return "Every Orbit may have no more than " + string(limit) + " Planets in them.";
-		}
-		
+		return "No orbit can exceed its capacity.";
+			
 	}
 	
 	//loop through every orbit
@@ -51,11 +47,7 @@ function forcePlanetsPerOrbit(limit, msg){
 		    orbits[i].limit = limit;
 		}
 		
-		if (limit == 1){
-			return "Every Orbit must have exactly " + string(limit) + " Planet.";
-		}else{
-			return "Every Orbit must have exactly " + string(limit) + " Planets.";
-		}
+		return "Every Orbit must be full";
 		
 	}
 	
@@ -194,6 +186,9 @@ function banOrbit(orbit_index, msg){
 	
 	if (msg){	
 				
+		//set limit value to 0 on banned orbit
+		obj_level_controller.orbits[orbit_index].limit = 0;
+		
 		if (orbit_index == num_orbits-1){
 			return "No planets can be in the outermost Orbit.";
 		}

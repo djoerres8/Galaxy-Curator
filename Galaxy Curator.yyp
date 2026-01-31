@@ -144,6 +144,7 @@
     {"id":{"name":"spr_level_select","path":"sprites/spr_level_select/spr_level_select.yy",},},
     {"id":{"name":"spr_level_success","path":"sprites/spr_level_success/spr_level_success.yy",},},
     {"id":{"name":"spr_level_tutorial_box","path":"sprites/spr_level_tutorial_box/spr_level_tutorial_box.yy",},},
+    {"id":{"name":"spr_logo","path":"sprites/spr_logo/spr_logo.yy",},},
     {"id":{"name":"spr_menu_button","path":"sprites/spr_menu_button/spr_menu_button.yy",},},
     {"id":{"name":"spr_mini_system","path":"sprites/spr_mini_system/spr_mini_system.yy",},},
     {"id":{"name":"spr_moon_heart","path":"sprites/spr_moon_heart/spr_moon_heart.yy",},},
