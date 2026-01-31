@@ -21,8 +21,12 @@ var yy = margin_y;
 rowBreak = 0;
 sprites_in_row = cols;
 
+
+highest_level = 30
+
+
 // generate levels
-for (i = 1; i <= min(global.HIGHEST_LEVEL_COMPLETED, max_levels); i++)
+for (i = 1; i <= min(highest_level, max_levels); i++)
 {
 	if (rowBreak == sprites_in_row)
 	{
@@ -39,7 +43,7 @@ for (i = 1; i <= min(global.HIGHEST_LEVEL_COMPLETED, max_levels); i++)
 }
 
 // edge case: no save data
-if (global.HIGHEST_LEVEL_COMPLETED == 0)
+if (highest_level == 0)
 {
 	var ins = instance_create_depth(margin_x, margin_y, 0, obj_level_select_button);
 	ins.level_select_option = 1;
