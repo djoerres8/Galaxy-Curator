@@ -79,7 +79,6 @@ if(instance_place(x, y, obj_hand) && (!global.HOLDING_SOMTHING || (obj_hand.moon
 	for (var i = 0; i < array_length(moons); i++){
 		if (instance_place(moons[i].x, moons[i].y, obj_hand) && !position_meeting(mouse_x, mouse_y, self)){
 			draw = 0;
-			show_debug_message("RAHHHHHHH");
 		}
 	}
 

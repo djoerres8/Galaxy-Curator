@@ -8,8 +8,6 @@ sprites_in_row = 5;
 max_level = 10;
 space_between = (room_width-350)/5
 
-show_debug_message("Highest Level Completed: " + string(global.HIGHEST_LEVEL_COMPLETED));
-
 //generate levels up to max in rows of how many specified above
 //may need to redo to make more dynamic, right now uses sprite heights and pixel numbers to set distances
 for(i = 1; i <= global.HIGHEST_LEVEL_COMPLETED; i++)

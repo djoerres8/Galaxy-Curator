@@ -189,13 +189,29 @@ function LimitUsableMoons(limit, msg){
 }
 	
 function banOrbit(orbit_index, msg){
-	switch (orbit_index){
-			case 0: return "No planets can be in the orbit closest to the sun.";
-			case 1: return "No planets can be in the 2nd Orbit.";
-			case 2: return "No planets can be in the 3rd Orbit.";
-			case 3: return "No planets can be in the 4th Orbit.";
-			case 4: return "No planets can be in the 5th Orbit.";
-			case 5: return "No planets can be in the outermost Orbit.";
+	
+	var num_orbits = array_length(obj_level_controller.orbits);
+	
+	if (msg){	
+				
+		if (orbit_index == num_orbits-1){
+			return "No planets can be in the outermost Orbit.";
+		}
+		
+		else if (num_orbits == 3 && orbit_index == 1){
+			return "No planets can be in the middle Orbit.";
+		}
+		
+		else{
+			switch (orbit_index){
+				case 0: return "No planets can be in the orbit closest to the sun.";
+				case 1: return "No planets can be in the 2nd Orbit.";
+				case 2: return "No planets can be in the 3rd Orbit.";
+				case 3: return "No planets can be in the 4th Orbit.";
+				case 4: return "No planets can be in the 5th Orbit.";
+			}
+		}
+		
 	}
 	
 	// make sure specified orbit has 0 planets
