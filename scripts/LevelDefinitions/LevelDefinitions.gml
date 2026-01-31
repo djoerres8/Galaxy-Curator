@@ -302,7 +302,7 @@ global.LEVELS[16] = {
 		],
 	rules: [
 		function (msg) { return forcePlanetsPerOrbit(2, msg); },
-		function (msg) { return forceMinimumMoonsPerPlanet(2, msg); }
+		function (msg) { return forceMoonsPerPlanet(2, msg); }
 	],
 	tutorial : ""
 };
