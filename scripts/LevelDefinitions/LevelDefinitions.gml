@@ -253,6 +253,7 @@ global.LEVELS[14] = {
 		],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(2, msg); },
+		function (msg) { return allPlanetsPassing(msg); },
 	],
 	tutorial : ""
 };
@@ -275,6 +276,7 @@ global.LEVELS[15] = {
 		],
 	rules: [
 		function (msg) { return limitPlanetsPerOrbit(1, msg); },
+		function (msg) { return allPlanetsPassing(msg); },
 	],
 	tutorial : ""
 };
@@ -302,9 +304,74 @@ global.LEVELS[16] = {
 		],
 	rules: [
 		function (msg) { return forcePlanetsPerOrbit(2, msg); },
-		function (msg) { return forceMoonsPerPlanet(2, msg); }
+		function (msg) { return forceMoonsPerPlanet(2, msg); },
+		function (msg) { return allPlanetsPassing(msg); },
+	],
+	tutorial : "This one's a doozy."
+};
+
+// LEVEL 17
+global.LEVELS[17] = {
+    number_of_orbits: 4,
+    planets: [
+        { temperature: "hot", shape: "circle", size: "small" , count: 2 },
+		{ temperature: "cold", shape: "circle", size: "medium" , count: 1 },
+		{ temperature: "temperate", shape: "heart", size: "medium" , count: 1 },
+		{ temperature: "temperate", shape: "spiky", size: "medium" , count: 1 },
+		{ temperature: "hot", shape: "spiky", size: "medium" , count: 1 },
+		{ temperature: "cold", shape: "spiky", size: "medium" , count: 1 },
+    ],
+	moons: [
+		{ modifier: "larger" , count: 2 },
+		{ modifier: "heart" , count: 1 },
+		{ modifier: "hotter" , count: 1 },
+		],
+	rules: [
+		function (msg) { return forcePlanetsPerOrbit(2, msg); },
+		function (msg) { return LimitUsableMoons(5, msg); },
+		function (msg) { return allPlanetsPassing(msg); },
 	],
 	tutorial : ""
+};
+
+// LEVEL 18
+global.LEVELS[18] = {
+    number_of_orbits: 5,
+    planets: [
+        { temperature: "hot", shape: "circle", size: "large" , count: 3 },
+		{ temperature: "hot", shape: "heart", size: "large" , count: 1 },
+		{ temperature: "hot", shape: "spiky", size: "large" , count: 3 },
+    ],
+	moons: [
+		{ modifier: "heart" , count: 1 },
+		{ modifier: "colder" , count: 5 },
+		{ modifier: "smaller" , count: 2 },
+		],
+	rules: [
+		function (msg) { return limitPlanetsPerOrbit(3, msg); },
+		function (msg) { return allPlanetsPassing(msg); },
+	],
+	tutorial : "Hot hot hot hot!"
+};
+
+// LEVEL 19
+global.LEVELS[19] = {
+    number_of_orbits: 6,
+    planets: [
+        { temperature: "hot", shape: "circle", size: "large" , count: 3 },
+		{ temperature: "hot", shape: "heart", size: "large" , count: 1 },
+		{ temperature: "hot", shape: "spiky", size: "large" , count: 3 },
+    ],
+	moons: [
+		{ modifier: "heart" , count: 1 },
+		{ modifier: "colder" , count: 5 },
+		{ modifier: "smaller" , count: 2 },
+		],
+	rules: [
+		function (msg) { return limitPlanetsPerOrbit(3, msg); },
+		function (msg) { return allPlanetsPassing(msg); },
+	],
+	tutorial : "Hot hot hot hot!"
 };
 
 // LEVEL 20
@@ -329,7 +396,7 @@ global.LEVELS[20] = {
 		function (msg) { return allPlanetsPassing(msg); }
 	],
 	tutorial : "Oops all moons!"
-};
+
 //START OF DAVIDS LEVELS
 
 // LEVEL 21
