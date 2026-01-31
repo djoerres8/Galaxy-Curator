@@ -396,6 +396,8 @@ global.LEVELS[20] = {
 		function (msg) { return allPlanetsPassing(msg); }
 	],
 	tutorial : "Oops all moons!"
+};	
+	
 
 //START OF DAVIDS LEVELS
 
