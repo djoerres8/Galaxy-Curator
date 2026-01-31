@@ -234,7 +234,7 @@ global.LEVELS[13] = {
 		function (msg) { return forcePlanetsPerOrbit(1.5, msg); },
 		function (msg) { return allPlanetsPassing(msg); },
 	],
-	tutorial : ""
+	tutorial : "Do you still need these messages?"
 };
 
 // LEVEL 14
@@ -255,7 +255,7 @@ global.LEVELS[14] = {
 		function (msg) { return limitPlanetsPerOrbit(2, msg); },
 		function (msg) { return allPlanetsPassing(msg); },
 	],
-	tutorial : ""
+	tutorial : "I'm a rocket man."
 };
     
 // LEVEL 15
@@ -278,7 +278,7 @@ global.LEVELS[15] = {
 		function (msg) { return limitPlanetsPerOrbit(1, msg); },
 		function (msg) { return allPlanetsPassing(msg); },
 	],
-	tutorial : ""
+	tutorial : "Burnin' out his fuse up here alone."
 };
 
 // LEVEL 16
@@ -331,7 +331,7 @@ global.LEVELS[17] = {
 		function (msg) { return LimitUsableMoons(5, msg); },
 		function (msg) { return allPlanetsPassing(msg); },
 	],
-	tutorial : ""
+	tutorial : "Gruumf would approve."
 };
 
 // LEVEL 18
@@ -358,20 +358,24 @@ global.LEVELS[18] = {
 global.LEVELS[19] = {
     number_of_orbits: 6,
     planets: [
-        { temperature: "hot", shape: "circle", size: "large" , count: 3 },
-		{ temperature: "hot", shape: "heart", size: "large" , count: 1 },
-		{ temperature: "hot", shape: "spiky", size: "large" , count: 3 },
+        { temperature: "cold", shape: "spiky", size: "large" , count: 1 },
+		{ temperature: "cold", shape: "heart", size: "large" , count: 1 },
+		{ temperature: "temperate", shape: "spiky", size: "large" , count: 2 },
+		{ temperature: "hot", shape: "heart", size: "small" , count: 2 },
+		{ temperature: "any", shape: "spiky", size: "medium" , count: 1 },
     ],
 	moons: [
 		{ modifier: "heart" , count: 1 },
-		{ modifier: "colder" , count: 5 },
 		{ modifier: "smaller" , count: 2 },
+		{ modifier: "hotter" , count: 1 },
+		{ modifier: "circle" , count: 1 },
 		],
 	rules: [
-		function (msg) { return limitPlanetsPerOrbit(3, msg); },
+		function (msg) { return limitPlanetsPerOrbit(2, msg); },
+		function (msg) { return banOrbit(1, msg); },
 		function (msg) { return allPlanetsPassing(msg); },
 	],
-	tutorial : "Hot hot hot hot!"
+	tutorial : "Some levels restrict the orbits you can use."
 };
 
 // LEVEL 20
