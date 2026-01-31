@@ -402,9 +402,6 @@ global.LEVELS[20] = {
 	],
 	tutorial : "Oops all moons!"
 };	
-	
-
-//START OF DAVIDS LEVELS
 
 // LEVEL 21
 global.LEVELS[21] = {
@@ -459,7 +456,6 @@ global.LEVELS[22] = {
 	tutorial : "Look at all those tiny planets! this must be a small-or system."
 };
 
-
 // LEVEL 23
 global.LEVELS[23] = {
     number_of_orbits: 6,
@@ -489,6 +485,129 @@ global.LEVELS[23] = {
 	],
 	tutorial : ""
 };
+
+// LEVEL 24
+global.LEVELS[24] = {
+    number_of_orbits: 4,
+    planets: [ 
+        
+		{ temperature: "temperate", shape: "heart", size: "medium" , count: 1 },
+		{ temperature: "cold", shape: "heart", size: "small" , count: 1 },
+		{ temperature: "cold", shape: "spiky", size: "large" , count: 1 },
+		{ temperature: "hot", shape: "circle", size: "medium" , count: 1 },
+		{ temperature: "hot", shape: "spiky", size: "medium" , count: 1 },
+		{ temperature: "temperate", shape: "circle", size: "medium" , count: 1 },
+    ],
+	moons: [ 
+		{ modifier: "hotter" , count: 2 },
+		{ modifier: "colder" , count: 1 },
+		{ modifier: "larger" , count: 2 },
+		{ modifier: "circle" , count: 1 },
+	],
+	rules: [
+		function (msg) { return forcePlanetsPerOrbit(2, msg); },
+		function (msg) { return forceMoonsPerPlanet(1, msg); },
+    function (msg) { return allPlanetsPassing(msg); },
+	],
+	tutorial : ""
+};
+
+// LEVEL 25
+global.LEVELS[25] = {
+    number_of_orbits: 3,
+    planets: [ 
+        
+		{ temperature: "any", shape: "circle", size: "medium" , count: 1 },
+    ],
+	moons: [ 
+		
+	],
+	rules: [
+		
+	],
+	tutorial : "Level In Progress"
+};
+
+// LEVEL 26
+global.LEVELS[26] = {
+    number_of_orbits: 3,
+    planets: [ 
+        
+		{ temperature: "any", shape: "circle", size: "medium" , count: 1 },
+    ],
+	moons: [ 
+		
+	],
+	rules: [
+		
+	],
+	tutorial : "Level In Progress"
+};
+
+// LEVEL 27
+global.LEVELS[27] = {
+    number_of_orbits: 3,
+    planets: [ 
+        
+		{ temperature: "any", shape: "circle", size: "medium" , count: 1 },
+    ],
+	moons: [ 
+		
+	],
+	rules: [
+		
+	],
+	tutorial : "Level In Progress"
+};
+
+// LEVEL 28
+global.LEVELS[28] = {
+    number_of_orbits: 3,
+    planets: [ 
+        
+		{ temperature: "any", shape: "circle", size: "medium" , count: 1 },
+    ],
+	moons: [ 
+		
+	],
+	rules: [
+		
+	],
+	tutorial : "Level In Progress"
+};
+
+// LEVEL 29
+global.LEVELS[29] = {
+    number_of_orbits: 3,
+    planets: [ 
+        
+		{ temperature: "any", shape: "circle", size: "medium" , count: 1 },
+    ],
+	moons: [ 
+		
+	],
+	rules: [
+		
+	],
+	tutorial : "Level In Progress"
+};
+
+// LEVEL 30
+global.LEVELS[30] = {
+    number_of_orbits: 3,
+    planets: [ 
+        
+		{ temperature: "any", shape: "circle", size: "medium" , count: 1 },
+    ],
+	moons: [ 
+		
+	],
+	rules: [
+		
+	],
+	tutorial : "Level In Progress"
+};
+
 
 // LEVEL X
 var sample_all = {
@@ -555,4 +674,3 @@ var sample_all = {
 	],
 	tutorial : ""
 };
-//END OF DAVIDS LEVELS
