@@ -234,6 +234,7 @@ global.LEVELS[13] = {
 	],
 	rules: [
 		function (msg) { return banOrbit(0, msg); },
+		function (msg) { return allPlanetsPassing(msg); }
 	],
 	tutorial : "Sometimes Orbits prefer to have no planets."
 };
@@ -285,9 +286,29 @@ global.LEVELS[15] = {
 	tutorial : "The sun is too hot!"
 };
 
-    
 // LEVEL 16
 global.LEVELS[16] = {
+    number_of_orbits: 5,
+    planets: [ 
+        
+        { temperature: "any", shape: "circle", size: "medium" , count: 10 },
+    ],
+    moons: [
+        { modifier: "spiky" , count: 5 },
+        { modifier: "heart" , count: 1 },
+        { modifier: "hotter" , count: 2 },
+        { modifier: "larger" , count: 3 },
+    ],
+    rules: [
+        function (msg) { return forceMoonsPerPlanet(1, msg); },
+		function (msg) { return allPlanetsPassing(msg); }
+    ],
+    tutorial : "Don't poke your eye out."
+};
+
+    
+// LEVEL 17
+global.LEVELS[17] = {
     number_of_orbits: 4,
     planets: [
         { temperature: "hot", shape: "heart", size: "small" , count: 1 },
@@ -309,8 +330,8 @@ global.LEVELS[16] = {
 	tutorial : "He's a Rocket Man."
 };
 
-// LEVEL 17
-global.LEVELS[17] = {
+// LEVEL 18
+global.LEVELS[18] = {
     number_of_orbits: 4,
     planets: [
         { temperature: "hot", shape: "circle", size: "small" , count: 2 },
@@ -333,8 +354,35 @@ global.LEVELS[17] = {
 	tutorial : "Burnin' out his fuse up here alone."
 };
 
-// LEVEL 18
-global.LEVELS[18] = {
+// Rad level - moderate diff. LEVEL 19
+global.LEVELS[19] = {
+    number_of_orbits: 6,
+    planets: [
+        { temperature: "cold", shape: "circle", size: "small" , count: 2 },
+        { temperature: "cold", shape: "circle", size: "medium" , count: 1 },
+        { temperature: "temperate", shape: "heart", size: "medium" , count: 1 },
+        { temperature: "temperate", shape: "spiky", size: "medium" , count: 1 },
+        { temperature: "hot", shape: "spiky", size: "medium" , count: 1 },
+        { temperature: "cold", shape: "spiky", size: "medium" , count: 1 },
+        { temperature: "temperate", shape: "spiky", size: "large" , count: 1 },
+        { temperature: "any", shape: "circle", size: "medium" , count: 1 },
+    ],
+    moons: [
+        { modifier: "spiky" , count: 2 },
+        { modifier: "heart" , count: 1 },
+        { modifier: "hotter" , count: 2 },
+        { modifier: "larger" , count: 3 },
+        ],
+    rules: [
+        function (msg) { return forcePlanetsPerOrbit(2, msg); },
+        function (msg) { return LimitUsableMoons(6, msg); },
+        function (msg) { return allPlanetsPassing(msg); },
+    ],
+    tutorial : "Hint: fill in the outer orbits first and work your way in."
+};
+
+// LEVEL 20
+global.LEVELS[20] = {
     number_of_orbits: 3,
     planets: [
         { temperature: "hot", shape: "spiky", size: "large" , count: 1 },
@@ -354,8 +402,8 @@ global.LEVELS[18] = {
 	tutorial : "Gruumf would approve."
 };
 
-// LEVEL 19
-global.LEVELS[19] = {
+// LEVEL 21
+global.LEVELS[21] = {
     number_of_orbits: 3,
     planets: [
         { temperature: "hot", shape: "circle", size: "small" , count: 1 },
@@ -378,8 +426,8 @@ global.LEVELS[19] = {
 	tutorial : "Oops all moons!"
 };
 
-// LEVEL 20
-global.LEVELS[20] = {
+// LEVEL 22
+global.LEVELS[22] = {
     number_of_orbits: 6,
     planets: [ 
         { temperature: "cold", shape: "spiky", size: "medium" , count: 1 },
@@ -408,8 +456,8 @@ global.LEVELS[20] = {
 	tutorial : "How many planets can even fit in a solar system?"
 };
 
-// LEVEL 21
-global.LEVELS[21] = {
+// LEVEL 23
+global.LEVELS[23] = {
     number_of_orbits: 6,
     planets: [
         { temperature: "cold", shape: "spiky", size: "large" , count: 1 },
@@ -433,8 +481,8 @@ global.LEVELS[21] = {
 	tutorial : "Some levels restrict the orbits you can use."
 };
 
-// LEVEL 22
-global.LEVELS[22] = {
+// LEVEL 24
+global.LEVELS[24] = {
     number_of_orbits: 5,
     planets: [
         { temperature: "hot", shape: "circle", size: "large" , count: 3 },
@@ -454,9 +502,8 @@ global.LEVELS[22] = {
 };
 
 	
-
-// LEVEL 23
-global.LEVELS[23] = {
+// LEVEL 25
+global.LEVELS[25] = {
     number_of_orbits: 2,
     planets: [ 
         { temperature: "cold", shape: "spiky", size: "small" , count: 1 },
@@ -480,8 +527,8 @@ global.LEVELS[23] = {
 	tutorial : "This one is really going to test your moon management."
 };
 
-// LEVEL 23
-global.LEVELS[23] = {
+// LEVEL 26
+global.LEVELS[26] = {
     number_of_orbits: 3,
     planets: [ 
         
@@ -505,11 +552,11 @@ global.LEVELS[23] = {
 		function (msg) { return LimitUsableMoons(3, msg); },
 		function (msg) { return allPlanetsPassing(msg); },
 	],
-	tutorial : "Look at all those tiny planets! this must be a small-or system."
+	tutorial : "Look at all those tiny planets! This must be a small-ar system."
 };
 
-// LEVEL 24
-global.LEVELS[24] = {
+// LEVEL 27
+global.LEVELS[27] = {
     number_of_orbits: 4,
     planets: [ 
         
@@ -535,8 +582,8 @@ global.LEVELS[24] = {
 };
 
 
-// David Level - LEVEL 26
-global.LEVELS[26] = {
+// David Level - LEVEL 28
+global.LEVELS[28] = {
     number_of_orbits: 5,
     planets: [ 
 		{ temperature: "hot", shape: "circle", size: "small" , count: 1 },
@@ -562,8 +609,8 @@ global.LEVELS[26] = {
 	tutorial : "In This system all planets need at least 1 moon."
 };
 
-// LEVEL 27
-global.LEVELS[27] = {
+// LEVEL 29
+global.LEVELS[29] = {
     number_of_orbits: 4,
     planets: [ 
 		{ temperature: "hot", shape: "circle", size: "small" , count: 2 },
@@ -587,52 +634,6 @@ global.LEVELS[27] = {
 		function (msg) { return allPlanetsPassing(msg); }
 	],
 	tutorial : "Pick wisely. You only get 3"
-};
-
-// Rad level - moderate diff. LEVEL 28
-global.LEVELS[28] = {
-    number_of_orbits: 6,
-    planets: [
-        { temperature: "cold", shape: "circle", size: "small" , count: 2 },
-        { temperature: "cold", shape: "circle", size: "medium" , count: 1 },
-        { temperature: "temperate", shape: "heart", size: "medium" , count: 1 },
-        { temperature: "temperate", shape: "spiky", size: "medium" , count: 1 },
-        { temperature: "hot", shape: "spiky", size: "medium" , count: 1 },
-        { temperature: "cold", shape: "spiky", size: "medium" , count: 1 },
-        { temperature: "temperate", shape: "spiky", size: "large" , count: 1 },
-        { temperature: "any", shape: "circle", size: "medium" , count: 1 },
-    ],
-    moons: [
-        { modifier: "spiky" , count: 2 },
-        { modifier: "heart" , count: 1 },
-        { modifier: "hotter" , count: 2 },
-        { modifier: "larger" , count: 3 },
-        ],
-    rules: [
-        function (msg) { return forcePlanetsPerOrbit(2, msg); },
-        function (msg) { return LimitUsableMoons(6, msg); },
-        function (msg) { return allPlanetsPassing(msg); },
-    ],
-    tutorial : "Hint: fill in the outer orbits first and work your way in."
-};
-
-// LEVEL 29
-global.LEVELS[29] = {
-    number_of_orbits: 5,
-    planets: [ 
-        
-        { temperature: "any", shape: "circle", size: "medium" , count: 10 },
-    ],
-    moons: [
-        { modifier: "spiky" , count: 5 },
-        { modifier: "heart" , count: 1 },
-        { modifier: "hotter" , count: 2 },
-        { modifier: "larger" , count: 3 },
-    ],
-    rules: [
-        function (msg) { return forceMoonsPerPlanet(1, msg); },
-    ],
-    tutorial : "Don't poke your eye out."
 };
 
 // LEVEL 30
@@ -661,7 +662,7 @@ global.LEVELS[30] = {
 		function (msg) { return forceMoonsPerPlanet(2, msg); },
 		function (msg) { return allPlanetsPassing(msg); },
 	],
-	tutorial : "This one's a doozy."
+	tutorial : "Last one, this one's a doozy."
 };
 
 

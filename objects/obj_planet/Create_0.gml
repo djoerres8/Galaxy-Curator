@@ -62,12 +62,16 @@ glow_scale = [1.05, 1.1, 1.15, 1.2, 1.25];
 glow_alpha = [.25, .2, .15, .1, .05];
 planet_color = c_gray;
 
+
+planet_circle_array = [spr_planet_circle_1, spr_planet_circle_2, spr_planet_circle_3];
+planet_selection = irandom(2);
+
 //PLANET VISUAL
 function applyVisuals() {
 
     // Shape → sprite
     switch (shape) {
-        case "circle": sprite_index = spr_planet_circle; break;
+        case "circle": sprite_index = planet_circle_array[planet_selection]; break;
         case "spiky":  sprite_index = spr_planet_spiky;  break;
         case "heart":  sprite_index = spr_planet_heart;  break;
 		default: sprite_index = spr_planet_circle;
